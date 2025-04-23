@@ -1,0 +1,5546 @@
+﻿CAPÍTULO 1
+INTRODUCCIÓN ALDISEÑO DE ALGORITMOS Y PROGRAMACIÓN
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lección 1  
+
+
+
+
+
+
+
+
+Lección 1
+
+
+Durante esta leccíón analizaremos conceptos básicos sobre algoritmos: qué es un
+algoritmo, para qué sirve, y cuál es la relación que existe entre algoritmo y programa.
+
+
+Estudiaremos los recursos iniciales de programación: variables, tipos de dato, operadores aritméticos, lógicos y relacionales, y las estructuras de control de flujo de datos que describe el teorema de /a programación estructurada.
+Veremos también cómo usar la herramienta de programación Eclipse para
+codificar, compilar, depurar y ejecutar nuestro primer programa.
+________________
+Ejecutamos algoritmos para resolver los problemas cotidianos que se nos presentan día a día, independientemente de cuál sea su nivel de complejidad.
+Por ejemplo, si estamos parados en el borde de la acera y queremos cruzar la calle, el siguiente algoritmo resolverá nuestra situación problemática:  
+Miramos hacia la izquierda.
+Si no viene ningún auto entonces:
+Miramos hacia la derecha.
+Si no viene ningún auto entonces:
+Cruzamos.
+Sino:
+
+
+
+
+      1. ¿Qué es un algoritmo?
+
+
+Es un conjunto finito y ordenado de pasos o acciones cuya ejecución nos permite resolver
+________________
+
+
+
+
+
+
+
+
+Sino:
+________________
+
+
+
+
+Fin Sino
+________________
+Esperamos.
+un problema.
+
+
+Dicho de otro modo: dado un determinado problema, cuáles serían las acciones y en qué ordendeberíamos ejecutarlas para lograr una resolución satisfactoria.
+________________
+Esperamos.
+Fin Sino.
+
+
+Lo anterior es sólo una mínima parte del algoritmo que ejecutamos cada vez que
+
+
+tenemos que cruzar una calle.
+
+
+Podría suceder que al mirar hacia la izquierda (o hacia la derecha) observemos que sí viene un coche, pero se encuentra a una distancia tal que igual podremos cruzar sin ser atropellados. Otal vez observemos que el coche no está tan leJos. pero se aproxima a baja velocidad. así que podremos cruzar de todos modos.
+La observación sobre la distancia y velocidad del coche, así como la determinación del grado de peligrosidad que esto representa para nosotros (si es que decidimos cruzar la calle) implica resolver una serie de cálculos de relativa complejidad, que realizamos mentalmente y sin darnoscuenta.
+Por ejemplo: llamemos p a nuestra ubicación, q a la ubicación del coche. va su velocidad, za nuestra velocidad (cuán rápido caminamos) y da la distancia que debemos recorrer para llegar al borde de la acera de enfrente.
+Entonces, el tiempo en que el coche llegará hacia nosotros lo calculamos como:
+1p-q1/v.y debe ser mayor que el tiempo que nos llevará cruzar la calle. que podemos calcular como: IP-dl/z. Incluso, inconscientemente manejamos un nivel de riesgo, pues
+no nosgustaría sentir el viento del coche pasando a 1 milímetro de nuestro cuerpo. Así que. si llamamos r al riesgo que estamosdispuestos a asumir. sólo cruzaremos la calle si se comprueba que: 1 lp-ql/v- IP-dl/z l>r.
+Esta decisión, que realizaremos en función de los cálculos precedentes, la podemos representar algorítmicamente con el siguiente fragmento de pseudocódigo:
+Si I lp·ql/v- lp·dl/z 1 >,entonces:
+Cruzamos.
+Fin Si.
+________________
+
+
+Sin embargo, no sólo los ingenieros podemos cruzar las calles de la ciudad. Todas las personas lo hacen a diario, porque el cerebro humano tiene la capacidad de realizar estas operaciones matemáticas en una milésima de segundo.
+Pero hay algo más: cruzamos. ¿Qué significa esto? Todoscomprendemos el significado de esta expresión porque tenemos capacidad de abstracción. Pero si nos detenemos a pensar qué implica cruzar veremos que también requiere una serie de acciones. Se trata de un algoritmo en sí mismo.
+Cruzar implica·
+
+
+Bajar el bordede la acera.
+Dar pasos hasta llegar al borde de la acera de enfrente. Subir el borde de la otra acera,
+Aúnhay más: dar un paso también es un algoritmo en sí mismo. que implica:
+
+
+Levantar un pie. Adelantarlo.
+Bajarlo.
+
+
+Razonando así. podemos entrar en detalle tanto como queramos. Sin embargo, esto no es necesario porque nuestra capacidad de abstracción nos permrte comprender qué representa un único término y qué acciones están involucradas.
+El desafío consiste en diseñar y describir (o programar) algoritmos para que sean ejecutados por un ordenador. que no tiene nuestra capacidad de abstracción.
+
+
+      2. Lenguaje algorítmico
+
+
+Para documentar un algoritmo se utiliza un lenguaJe algorítmico. Existen diversos
+
+
+lenguajes algorilmicos. pero los más utilizados son:
+
+
+
+
+1. Diagramas.
+
+
+2. Pseudocódigo.
+3. Lenguajes de programación.
+
+
+
+
+En este curso utilizaremos los tres. pero principalmente trabajaremos con el lenguaje de programación C++.
+
+
+      3. Recursos de programación
+
+
+         1. El ordenador
+
+
+El ordenador sólo puede realizar operaciones aritméticas y lógicas, y tiene mucha memoria. Pero al no tener nuestra capacidad de abstracción tendremos que indicarle, hasta el menor detalle. cómo debe hacer cada una de las cosas que queremos que haga.
+         2. Operaciones aritméticas y expresiones lógicas
+
+
+Una operación aritmética consiste en un cálculo matemático primario: suma, resta, multiplicación. división y módulo (o valor residual). Todos los lenguajes de programación proveen estos operadores matemáticos.
+Una expresión lógica es un enunciado susceptible de ser verdadero o falso. "2 es mayor que 5" es una expresión lógica cuyo valor de verdad es fa/so.
+________________
+
+
+Para que un ordenador pueda entender y ejecutar un algoritmo debemos escribirlo en algún lenguaje de programación. En este curso utilizaremos el lenguaje C++.
+Los lenguajes de programación están compuestos por un conjunto de palabras en inglés y un con¡unto de reglas sintácticas. La acción de escribir un algoritmo en C++ (o en cualquier otro lenguaje) se llama codificar. El algoritmo codificado se llama código fuente o simplemente programa.
+
+
+         4. Programa
+
+
+Un programa es un algoritmo codificado en algún lenguaje de programación. También podríamos decir que e/ algoritmo es la lógica de un programa de ordenador.
+Por ejemplo, el siguiente algoritmo nos permite preguntarle a una persona cómo se llama. y luego saludarla por su nombre:
+Preguntar su nombre (¿Cómo te llamas?).
+Escuchar y memorizar su nombre (Preparar la memoria y esperar la respuesta). Saludarlo por su nombre ("Hola", seguido del nombre que memorizamos).
+Si el pseudocódigo del algoritmo anterior lo codificamos en C++, lo convertiremos en un programa informático:
+Más adelante, veremos que existen operadores lógicos, que usaremos para realizar operaciones entre expresiones lógicas, obteniendo como resultado una nueva expresión lógica con su correspondiente valor de verdad.
+         3. Lenguaje de programación
+
+
+
+
+int main()
+[
+________________
+         5. Variables y tipos de dato
+// mensaje para el usuario
+cout << ºIngrese su nombre: 11-
+// preparamos la memoria para guardar su nombre
+string nom;
+// el usuario ingresa /introduce) su nombre y lo guardamos  
+en memoria
+cin >> nom;
+// salida del programa: un saludo para el usuario
+cout << 11Hola, 11 << nom << endl;
+
+
+return O;
+
+
+
+
+
+
+Laslíneas que comienzan con// (doble barra) son comentarios o acotaciones que nos ayudarán a comprender qué hace la siguiente línea de código.
+Las instrucciones cout y cin, que significan console out y canso/e in. permiten
+respectivamente mostrar un mensaje (salida) e introducir un dato (entrada).
+
+
+Para introducir un dato y recordarlo posteriormente. debemos almacenarlo en la memoria del ordenador. Esto requiere que anticipadamente dispongamos de un espacio de memoria, que en este caso usaremos para guardar una cadena de caracteres: el conjunto de caracteres que componen el nombre del usuario.
+La línea que dice string nom reserva dicho espacio de memoria identificándolocon la palabra nom. En adelante. dentro del programa. usaremos nom para tener acceso al dato que introdujo el usuario.
+Por el momento no analizaremos las palabras main y return.
+________________
+Los identificadores que utilizamos para representar espacios de memoria se llaman
+variables. Por ejemplo: la variable nom del programa anterior.
+
+
+Las variables permiten guardar datos en la memoria del ordenador. El espacio de memoria que representa una variable debe estar preparado especialmente en función de cuál sea el tipo de dato que allíqueremos guardar.
+En el ejemplo anterior. el tipo de dato de la variable nom es string. loque nos permtte guardar valores attanuméricos (cadenas de caracteres).
+Sin embargo, si en el programa le hubiésemos pedido al usuario que introdujera su edad. habríamos necesttado disponer de una variable de tipo numérico entero: int. Y si le hubiéramos preguntado por su altura, probablemente, la variable debiera haber sido de tipo numérico real: double.
+Observemos que llamamos nom a la variable, justamente porque la utilizaremos para guardar el nombre de una persona. Podríamos haberla llamado n, x, pepe o
+theWalrusWas Paul.
+
+
+No importa cuál sea el nombre de la variable; aunque sí es muy importante escoger un nombre que describa cuál es el dato que la variable va a contener, pues eso nosayudará a incrementar la legibilidad del código.
+Por ejemplo. si en el algoritmo vamos a pedir introducir·nombre, edad y altura, deberíamos declarar tresvariables cuyos nombres podrían ser los siguientes:
+
+
+
+
+  
+
+
+
+Tabla1.1. Nombres de variables  
+
+
+Claramente, la Opción 1 es la más apropiada y la Opción 4 sería la peor elección.
+Sin embargo, funcionalmente todas son correctas.
+
+
+Las variables deben comenzar con un carácter alfabético o un guion bajo('_'). No pueden contener símbolos de puntuación ni operadores de ningún tipo.
+________________
+
+
+Tabla 1.2.Nombres de variables correctos e incorrectos
+
+
+         6. Convención de nombres de variables
+
+
+Más allá de las diferentes posibilidades que mostramos en la tabla anterior. existe una convención de nombres que restringe y ordena el modo en que debemos llamar a las variables que declaramos en nuestros programas.
+Según dicha convención, que aceptaremos y respetaremos a lo largo del curso, las variables deben escribirse en minúscula. Si su nombre está compuesto de dos o más palabras. cada inicial (excepto la primera) debe colocarse en mayúscula.
+Por ejemplo:
+
+
+int codigoPostal; string nombre;
+double alturaPromedio;
+
+
+Por supuesto, lo anterior no impide que utilicemos nombres triviales como i, j, k, p, q y auxpara nombrar aquellas variables que resultan poco relevantes. Pero sí debemos nombrarlas con letras minúsculas. Nunca en mayúscula.
+
+
+         7. Consola
+
+
+Más arriba mencionamos la consola. Simplemente diremos que se trata de un dispositivo de entrada/salida compuesto por el teclado físico del ordenador (entrada) y una ventana terminal (salida), a la que accedemos mediante la siguiente combinación de teclas: WIN + R - CMD (en Windows).
+         8. Compilador
+
+
+Para que el ordenador pueda ejecutar un programa debemos convertir su código fuente en lo que llamaremos código de máquina; esto es: unos y ceros. Pues el ordenador sólo comprende y ejecuta instrucciones codificadas de este modo.
+Loslenguajes de programación incluyen un programa llamado compilador que
+realiza esa tarea por nosotros. Tal como se ilustra en la siguiente imagen.
+________________
+
+
+  
+
+
+
+Figura 1.1. Proceso de compilación
+
+
+El compilador selecciona el código fuente de un programa (que debe estar contenido en un archivo con extensión .cpp), y genera un archivo con extensión .exe conteniendo el código de máquina (unosy ceros) que sí podrá ser ejecutado por el ordenador.
+
+
+         9. Entorno Integrado de desarrollo
+
+
+El trabajo del programador consiste en diseñar el algoritmo, codificarlo, compilarlo, probarlo y depurarlo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-        29-30/758  >        Agregar a Mis libros        Comprar por $29.99
+
+
+  
+          
+
+
+Descargar Eclipse
+
+
+Existen herramientas para asistirnos durante todo el proceso de desarrollo, integrando estastareas y facilitando el trabajo de los programadores. Se denominan Entorno Integrado de Desarrollo o IDE(lntegrated Development Enviroment).
+Las IDE pueden ser open source, de pago, profesionales o de estudio. La elección de cuál IDE utilizar dependerá de nuestro gusto y/o presupuesto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
+________________
+Instalar y usar Eclipse
+
+
+Aquí utilizaremos una versión portable de Eclipse. Esta herramienta es open source, notiene coste y es de uso profesional. Además, es idéntica a la versión que se utiliza para programar en Java; lo que será una ventaja para el lector cuando decida aprender dicho lenguaje de programación.
+
+
+      4. Teorema de la programación estructurada
+
+
+Este teorema asegura que cualquier problema informático puede resolverse mediante un
+algoritmo compuesto por acciones de trestipos diferentes.
+
+
+Lostres tipos de acción a los que el teorema hace referencia son:
+
+
+
+
+1. Acción secuencial. también llamada acción simple.
+
+
+2. Acción condicional. también llamada acción de decisión.
+
+
+3. Acción iterativa. también llamada acción de repetición.
+
+
+
+
+Además. todas las acciones deben tener una única entrada y salida.Pero de esto hablaremos más adelante.
+Por ejemplo, al plantear el algoritmo que resuelve el problema de cruzar la calle,
+
+
+
+
+31-32/758  >        Agregar a Mis libros  
+usamos una acción condicional para determinar si debemos cruzarla o no. Si I lp-ql/v- lp-dl/z 1 >rentonces:  
+Cruzamos.  
+
+
+Fin Si.
+
+
+
+
+Dicho de otro modo, sólo ejecutaremos las acciones comprendidas en cruzamos si
+se comprueba que I lp-ql/v- IP-dl/z I esmayorquer.
+
+
+         4. Acción simple
+
+
+Mostrar un mensaje en la consola, leer un dato por teclado, recordar un valor en la memoria o ejecutar una operación aritmética o lógica son todas acciones simples. De hecho, el programa que analizamos anteriormente está compuesto íntegramente de acciones simples.  
+Dado que ya vimos su codificación en C++, aquí analizaremos cómo representarlo mediante un diagrama.
+________________
+
+
+Figura 1.2.Comparación entre dos formas de representaciónafgorftmica: diagrama y código fuente C++
+
+
+El diagrama comienza con una C (de comienzo) y finaliza con una F (de fin). Luego, con un trapecio abierto hacia abajo representamos la salida por consola.
+A continuación, en un rectángulo declaramos la variable nom cuyo tipo de dato es string, y con un trapecio abierto hacia arriba representamos la introducción de datos.
+Finalmente, usamos una salida para mostrar et saludo.
+
+
+Podemos apreciar que existe una relación directa entre el diagrama y el código fuente del programa
+
+
+         5. Acción condicional
+
+
+La acción condicional permite evaluar una expresión lógica y determinar. en función de
+
+
+cuál sea su valor de verdad, qué conJunto de acciones se debe ejecutar.
+
+
+En el algoritmo de cómo cruzar una calle, usamos una acción condicional para
+determinar qué hacer: cruzar o esperar.
+________________
+calcular la división entre dos valores numéricos enteros que introducirá el usuario. Debemos validar que el divisor sea diferente de cero, ya que la división por cero no está determinada.
+
+
+Si no vienen coches por la derecha entonces:
+SI no vienen coches por la izquierda entonces: Cruzo.
+Sino:
+Espero.
+
+
+
+
+Sino:
+________________
+Fin Sino.
+
+
+
+
+Espero.
+Fin Sino.
+
+
+En el pseudocódigo que describe este algoritmo utilizamos dos acciones condicionales anidadas: si se comprueba que no vienen coches por la derecha. entonces. validamos que no vengan coches por la izquierda. Si también se comprueba esta segunda condición, entonces, cruzamos. En cualquier otro caso: esperamos.
+Lo anterior podría simplificarse usando el operador lógicoY (and), así:
+
+
+Si no vienen autos por la derecha Y no vienen autos por la izquierda entonces:
+Cruzo.
+Sino:
+Espero.
+Fin Sino.
+
+
+Veamos otro ejemplo que requiere usar una acción condicional: un programa para
+
+
+int main{)
+{
+________________
+resultado        a*b;
+int a,b; // operandos
+char op; // operador (tipo char: contiene un caracter)
+double resultado;
+int error-= O¡
+// leemos los datos
+cout << "Ingrese la expresion: 11•
+cin >>a>> op >> b;
+if  ( op=='+' )// determinamos cual es el operador
+{
+resultado= a+b;
+________________
+else
+{
+if( op=='/'
+{
+if( b!=O
+{
+resultado        a/b;
+}
+else
+{
+cout <<  11ERROR: Divide por cero11  << endl;
+error= 1;
+}
+else
+{
+if ( op=='-' )
+{
+resultado        a-b;
+________________
+
+
+
+
+else
+{
+cout << "ERROR: Operador incorrecto" << endl;
+error =l;
+
+
+else
+{
+if( op=='•' )
+{
+________________
+
+
+//sino hubo error podemos mostrar el resultado
+if ( error==O )
+{
+cout<< a<< op << b << 11-11 <<resultado<< endl;
+
+
+
+
+return O;
+
+
+
+
+
+
+El programa es bastante simple, aunque el hecho de anidar acciones condicionales (un if dentro de otro if) lo puede tornar algo engorroso.
+La lógica es la siguiente: comenzamos leyendo una expresión compuesta por un
+
+
+operando (a), un operador (op) y otro operando (b). Luego determinamos cuál es el operador en cuestión. Para esto utilizamos un if, para preguntar si se trata de la suma; en tal caso asignamos a+b a la variable resultado.
+Si el operador no fue+, entonces (por else) preguntamos si fue - (resta). De ser asíasignamos a-b a la variable resultado. Continuamos el proceso para determinar si el operador fue* (producto) o/ (división). En este último caso, debemos comprobar que b (el segundo operando) no sea O (cero),ya que la división por cero no está determinada. Si no hubo error mostramos el resultado de la operación.
+Utilizamos la variable error para contener sólo dos valores: O para indicar que no hubo error y 1 para reflejar sí lo hubo. Podríamos interpretar que O es fa/so (false) y1 esverdadero (true). Más adelante veremos que existe el tipo de dato bool preparado,
+justamente, para contener estos dos valores posibles.
+________________
+
+
+Bajar el borde.
+Mientras no llegue al borde de la acera de enfrente hacer: Dar un paso.
+Fin Mientras.
+Subir el borde.
+
+
+Como ejemplo de uso de la acción iterativa, analizaremos un programa que muestra por consola los primeros n números naturales (incluyendo el cero), donde n es un valor que íntroducirá el usuario.
+
+
+         6. Acción iterativa
+
+
+La acción iterativa permite repetir un conjunto de acciones mientras se compruebe una
+determinada expresión lógica.
+
+
+Volviendo al problema de cruzar la calle, habíamos llegado a la conclusión de que cruzar implicaba bajar el borde, dar pasos hasta llegar al borde de la acera de enfrente y subir el borde.
+Podríamos reformular dar pasos hasta llegar al borde de la acera de enfrente por: mientras no lleguemos al borde de la acera de enfrente, dar pasos. Así, el pseudocódigo del algoritmo lucirá del siguiente modo:
+
+
+lógica indicada en la cabecera.  
+
+
+En C++, la acción iterativa se codifica con la palabra while.
+
+
+La estrategia para resolver el problema consiste en utilizar una variable que vaya adquiriendo, uno a uno, los valores que vamos a mostrar: O, 1, 2, ..., n-2, n-1.
+Para esto declaramos la variable i y le asignamos el valor inicial O(cero). Luego, todo lo que hagamos se repetirá exactamente n veces (ya veremos cómo) por estar ubicado dentro del ciclo iterativo.
+Primera iteración: Mostramos el valor de i (que es O) y le sumamos 1, dejándolo en 1. Segunda iteración: Mostramos el valor de i (que es 1) y le sumamos 1, dejándolo en 2. Tercera iteración: Mostramos el valor de i (que es 2) y le sumamos 1, dejándolo en 3.
+El problema está resuelto, aunque falta hacer que el ciclo iterativo se detenga.
+Para esto escogeremos la condición: i <n. Es decir: mostraremos el valor de i y lo
+incrementaremos mientras que su valor se mantenga menor que n.
+
+
+
+
+
+
+
+
+Figura 1.4. Acción iterativa: representación mediante diagrama y codificación
+
+
+En los diagramas omitiremos poner los mensajes (salidas) destinados al usuario, pues su objetivo es reflejar la lógica del algoritmo. La amigabilidad del programa no forma parte de su lógica.
+La acción iterativa se representa con dos rectángulos: el rectángulo superior es una especie de cabecera que indica cuál es la condición que se debe cumplir para que el ciclo itere una vez más. El rectángulo principal es el contenedor; todas las acciones que coloquemos allí dentro se repetirán una yotra vez mientras se compruebe la expresión
+________________
+Cabe destacar que, dentro del ciclo iterativo, modificamos el valor de i: lo incrementamos. De este modo, en algún momento i alcanzará el valor den. Esto hará que la condición del ciclo se deje de cumplir, poniendo fin a las iteraciones.
+Diremosque la expresión i=i +1 se llama contador. De hecho, estamos usando la variable i para contar cuántas iteraciones lleva realizando el ciclo iterativo, que además coincide con la cantidad de números naturales que mostraremos.
+La figura 1.5. ilustra otro ejemplo: un algoritmo que muestra por consola los
+primeros n números pares, donde n es un valor numérico que introducirá el usuario.
+
+
+Comenzamos declarando la variable n y leyendo cuántos números paresquiere ver
+
+
+
+
+el usuario. Luego declaramos la variable i. le asignamos el valor inicial O(cero). y la introducimos en un ciclo de repeticiones que iterará mientras el valor de i sea menor que n.  
+Dentro de este ciclo, durante la primera iteración el valor de i será O; en la segunda iteración será 1; en la tercera iteración será 2; y así sucesivamente.
+Para obtener el número par que corresponde a la i-ésima iteración simplemente
+debemos multiplicar i *2 y asignarlo a la variable nroPar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura 1.5.Ejemplo: muestra los primeros n números pares
+
+
+Sea cual fuere el valor de i. almultiplicarlo por 2 obtendremos el siguiente número par, como podemos apreciar en siguiente la tabla.
+
+
+
+
+
+
+int main()  
+{  
+leemos a y b
+int a,b;
+cout << ºIngrese a y b: 11  
+cin >>a>> b;
+
+
+//aquí llevaremos la suma parcial  
+int sum=O;
+// iteramos a veces  
+int i=O;
+while( i<a)
+{  
+
+
+
+
+Tabla 1.3. Números pares
+
+
+Veamos otro ejemplo: cómo calcular el producto entre dosvalores que introducirá el usuario. Pero no utilizaremos el operador*, lo haremos mediante sumas sucesivas. Es decir, a*b se calcula sumando: a veces b o b veces a.
+La lógica del programa es la siguiente: leemos a y b, y utilizamos una estructura de repetición para iterar exactamente a veces. Por cada iteración sumamos el valor de b a la variable sum. cuyo valor inicial es O(cero). De este modo, estaremos sumando (acumulando) sobre dicha variable el valor de b, a veces.
+________________
+sum= sum+b;// sumamos a veces b
+i        i+l;
+
+
+salida del programa  
+cout << a << 11*11 << b << 11= 11 << sum << endl;
+return O;
+
+
+
+
+
+
+         7. Acciones de única entrada yúnica salida
+
+
+Lostrestipos de acción que describe el teorema de la programación estructurada deben tener una única entrada y salida. Esto significa que el flujo de ejecución del algoritmo siempre será de arriba hacia abajo; y en ningún caso se podrá omitir la ejecución de alguna/s instrucción/es.
+Por esto. se prohíbe el uso de la instrucción goto; lacual no explicaremos ni
+volveremos a mencionar.
+
+
+
+
+      5. Másrecursos de programación
+
+
+
+
+         8. Contadores y acumuladores
+
+
+En el programa anterior, utilizamos la expresión i=i +1 para incrementar en una unidad
+el valor de la variable i por cada iteración del ciclo while. Diremos que i, utilizada de este modo. es un contador. Pues su función. en este caso. es contar cuántas iteraciones lleva realizadas la estructura de repetición.
+La expresión sum;sum+b, que utilizamos en el programa anterior. permite
+acumular el valor de ben la variable sum. Diremos que sumes un acumulador.
+
+
+
+
+         9. Prueba de escritorio
+
+
+Una prueba de escritorio es una herramienta analítica que nos ayuda a determinar si el algoritmo que diseñamos funciona correctamente. Pues nos permite visualizar qué valores adquieren las variables que utilizamos en el programa.
+Consiste en un seguimiento. paso a paso. de cada una de las acciones que ejecuta el algoritmo, tomando nota de qué valores asignamos a las variables.
+Realizaremos una prueba de escritorio para el algoritmo del apartado anterior, que
+calcula el producto entre dos valores mediante sumas sucesivas.
+
+
+Debemos respetar los siguientes pasos:
+
+
+1. Identificar cuáles son las variables independientes del algoritmo. Esdecir, aquellas variables cuyo valor inicial es arbitrario; generalmente las variables independientes contienen los valores introducidos por el usuario. En nuestro caso. a y b son variables independientes.
+2. Dibujar una tabla compuesta por filas y columnas. Cada columna representa una variable del algoritmo. comenzando por las variables independientes;
+________________
+luego todas las demás. en el orden en que aparecen en el programa.
+1. S1el algoritmo contiene una estructura iterativa. podemos incluir una columna para representar la condición lógica de dicho ciclo.
+2. Cada fila de la tabla representará una iteración.
+
+
+La tabla de apoyo que nospermitirá realizar la prueba de escritorio para nuestro
+algoritmo la veremos a continuación.
+
+
+Las columnas representan a las variables a, b (que son variables independientes). sum, i y una columna adicional para representar la condición del ciclo iterativo (i<a).
+El vídeo apuntado por el QR de la derecha muestra cómo ccmpletar la tabla para realizar la prueba de escritorio. y así poder determinar sí el algoritmo funciona correctamente.
+
+
+  
+
+
+
+Prueba de escritorio
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+	Independientes
+	Dependientes
+	a
+	b
+	sum
+	i
+	i<a
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	¡[
+	l        1
+	Tabla 1.4.Prueba de esc.ritorio
+
+
+
+
+         10. Operadores aritméticos
+
+
+Loslenguajes de programación proveen operadores a través de los cualespodemos realizar operaciones arrtméticas. La tabla 1.5. resume los operadores arítméticos disponibles en C++.
+El operador% (módulo o resto) devuelve el residuo que se origina al dividir sus operandos. Por esto 7%3 es 1, ya que 7/3 es 2 y resta 1.
+Otro ejemplo: 15%11es 4, pues 11 entra 1 vez en 15 y sobran 4. Y 5%8 es 8, ya
+que 8 no entra ni una sola vez en 5; sobran 8.
+
+
+Por otra parte, el operador/ (división) realiza la división entre sus operandos y devuelve (retorna) el cociente. Pero si el tipo de dato de ambos operandos es int entonces obtendremos, como resultado de la división, un valor entero, tipo int.
+
+
+
+
+
+
+
+
+
+
+
+
+Operación
+	Operador
+	Ejemplo
+	Explicación
+	
+
+
+
+Suma
+	
+
+
+
++
+	
+
+int a,b; cin>> a >>b; int e = a+b;
+	Si el usuario introduce 2 y 3, después de asignar c=a+b el valor de e será 5.
+	
+
+
+
+Resta
+	
+
+-
+	
+
+int a,b; cin>> a >> b; int e = a-b;
+	Si el usuario introduce 5 y 3, después de asignar c=a-b el valor de e será 2.
+	
+
+
+
+Multiplicación
+	
+
+
+
+*
+	
+
+int a,b; cin>> a >> b; int e = a*b;
+	Si el usuario introduce 2 y 3, después de asignar c=a*b el valor de e será 6.
+	
+
+
+
+División
+	
+
+/
+	
+
+int a,b; cin>> a >> b;
+double e = a/b;
+	Si el usuario introduce 6 y 2, después de asignar c=a/b el valor de e será 3.
+	
+
+
+
+Módulo
+	
+
+
+
+%
+	
+
+int a,b; cin>> a >> b; int e = a%b;
+	Si el usuario introduce 7 y 3, después de asignar c=a%b el valor de e será 1.
+	<        >
+
+
+
+
+Tabla 1.5. Operadores aritméticos disponibles en C++
+
+
+En el ejemplo del operador de división. aceptamos que el usuario introduce los valores 6 y 2. El cociente entre ambos operandos es 3. Pero si el usuario introduce 6 y 4 en las variables a y b respectivamente. siendo ambas de tipo int. el resultado será 1; pues 4 entra una única vez en 6.
+
+
+Para obtener la división real. el tipo de dato de alguno de los operandos que intervienen en la operación debe ser double. Podemos convertir temporalmente el tipo de dato de una variable anteponiéndole (entre paréntesis) el tipo de dato provisorio que le queremos dar.
+
+
+int a,b;
+cin>> a>>  b;
+double e= (double)a/b;// casteamos
+
+
+Esta conversión de tipo de dato se llama cast y su alcance es temporal. Sólo tiene efecto en la línea donde fue colocada; luego, la variable a seguirá siendo int.
+De igual modo. podríamos haber casteado la variable b obteniendo exactamente el mismo resultado en la división.
+<        double e        a/(double)b; // casteamos        >
+
+
+         11. Otras operaciones matemáticas
+Cuando hablamos de operadores aritméticos nos referimos a los operadores primitivos: +. -. *. / y %. Pero el lenguaje de programación permite realizar otras operaciones matemáticas. como ser: potencia. raíz cuadrada. operaciones
+trígonométricas. logaritmos. valor absoluto. etcétera.
+Estas operaciones no son primitivas. lo cual significa que están programadas en C++ y están provistas como parte de la biblioteca de funciones del lenguaje.
+Para incluir las bibliotecas que nos darán acceso a estas y otras funciones utilizaremos la instrucción #include.
+
+
+En el siguiente programa. incluimos las bibliotecas math.h y stdlib.h einvocamos las funciones abs, sqrt y log (valor absoluto. raíz cuadrada y logaritmo natural respectivamente).
+
+
+// incluimos algunas bibliotecas
+#include<math.h> #include <stdlib.h>
+int main ()
+{
+int a = abs (-1);        // valor absoluto
+cout << a << endl; //  salida: l
+int b = sqrt(64);        // raíz cuadrada
+cout << b << endl; //  salida: 8    
+
+
+double e= log(2.71); // logaritmo natural
+cout «        e«        endl;        // salida: 0.996... (casi 1)
+
+
+return O;
+
+
+
+
+
+
+         12. Operadores y expresiones lógicas
+Como ya hemos explicado, una expresión lógica es un enunciado susceptible de ser verdadero o falso. El valor de las siguientes expresiones lógicas es verdadero: "John Lennon integró Los Beatles". "Einstein formuló la teoría de la relatividad" y "Dos es menor que cinco".
+En cambio. "Mick Jagger brilló como piloto de Fórmula 1", "Leonardo da Vinci nació en Argentina" y "Ocho es un número impar" son expresiones lógicas cuyo valor de verdad es falso.
+
+
+Los operadores lógicos permiten combinar expresiones lógicas para obtener una nueva expresión lógica. cuyo valor de verdad dependerá de los valores de verdad de las expresiones que la componen.
+Por ejemplo: "Paul McCartney integró Los Beatles" Y "John Lennon integró Los Beatles" son dos expresiones lógicas verdaderas. Al combinarlas con el operador lógico Y (and) la expresión lógica resultante también resulta verdadera.
+En cambio "Paul McCartney integró Los Beatles" Y •John Lennon fue un enano de Blancanieves" tienen. respectivamente. valores de verdad verdadero y fa/so. Al combinarlas con el operador lógico Y el resultado será una expresión lógica falsa.
+El operador O (or) funciona diferente. La expresión "Paul McCartney integró Los Beatles" o "John Lennon fue un enano de Blancanieves" es verdadera. ya que al menos una parte de la expresión efectivamente lo es. Por último. el operador NO    
+(not) niega el valor de verdad de una expresión lógica. obteniendo como resultado el valor opuesto.
+El operador lógico Y será verdadero si ambos operandos lo son. El operador O resulta verdadero si al menos uno de sus operandos lo es. Teniendo en cuenta esto. podemos formular las siguientes tablas de verdad para dos proposiciones p y q
+
+
+p
+	q
+	pandq
+	V
+	V
+	V
+	V
+	f
+	f
+	f
+	V
+	f
+	f
+	f
+	f
+	
+
+p
+	q
+	p orq
+	V
+	V
+	V
+	V
+	f
+	V
+	f
+	V
+	V
+	f
+	f
+	f
+	  
+
+
+
+Tabla 1.6.Tablas de verdad
+
+
+En C++ estos operadores se codifican del siguiente modo:
+
+
+and
+	&& o and
+	or
+	11 o or
+	not
+	
+
+	
+
+Tabla 1. 7. Operadores lógicos
+
+
+Únicamente. existen dos valores lógicos posibles: true (verdadero) y
+false (falso). y pueden ser contenidos en variables tipo bool.
+
+
+
+
+// el usuario introduce cuatro valores enteros    
+int a,b,c,d;    
+cin >>a>> b >>e>> d;
+
+
+// ejemplo usando&&: Si a es mayor que b Y e es mayor que d  
+if( a>b && C>d ){ /* ... */}
+
+
+// ejemplo usando{/  
+if( a>b 11 C>d ){ /* ...        */}
+
+
+bool x bool y bool z
+________________
+
+
+a>b && c>d; a>b && C>d;
+! ( ! (a>b) 11 ! (c>d) );
+
+
+
+
+         13. Operadores relacionales
+Los operadores relacionales permiten establecer sí existe una relación de precedencia o igualdad entre sus operandos. Los mismos son: > (mayor), <
+
+
+(menor), >= (mayor o igual). <= (menor o igual). == (igual) y I= (distinto o not
+equals).
+
+
+
+
+
+
+
+
+
+
+Operación
+	Operador
+	Ejemplo
+	Explicación
+	
+
+
+
+Mayor
+	
+
+
+
+>
+	
+
+int a,b;
+cin >> a >> b· bool  e = a>b;
+	Si el usuario introduce 2 y 3. después de asignar c=a>b el valor de e será false.
+	
+
+
+
+Mayor o igual
+	
+
+
+
+>=
+	
+
+int a,b;
+cin >> a >> b; bool e = a>=b;
+	Si el usuario introduce 5 y 3. después de asignar c=a>=b el valor de e será true.
+	
+
+
+
+Menor
+	
+
+
+
+<
+	
+
+int a,b;
+cin >> a >> b; bool e = a<b;
+	Si el usuario introduce 2 y 3, después de asignar c=a<b el valor de e será true.
+	
+
+
+
+Menor o igual
+	
+
+
+
+<=
+	
+
+int a,b;
+cin >> a >> b; bool e = a<=b;
+	Siel usuario introduce 6 y 2. después de asignar c=a<=b el valor de e será false.
+	
+
+
+
+Igual
+	
+
+--
+	
+
+int a,b;
+cin >> a >> b; bool  e = a==b;
+	Si el usuario introduce 7 y 3. después de asignar c=a==b el valor de e será false.
+	
+
+
+
+Distinto
+	
+
+
+
+!:=
+	
+
+int a,b; cin>> a >> b; bool e = a!=b;
+	Si el usuario introduce 7 y 3. después de asignar e = a!=b elvalor de e será
+true.
+	<        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tabla 1.8. Operadores relacionales
+
+
+         14. Operadores relacionales y cadenas de caracteres
+Los operadores relacionales también funcionan si los utilizamos para comparar cadenas de caracteres. En tal caso. el criterio de prioridad será alfabético.
+En el siguiente programa, el usuario introduce dos cadenas. Si la primera es alfabéticamente menor que la segunda. mostramos un mensaje en la consola.
+Suponiendo que el usuario introduce "Juan" y "Pablo", el programa arrojará la siguiente salida: "Juan es alfabéticamente menor que Pablo".
+
+
+string a,b;
+cin>> a>> b;// el usuario introduce dos cadenas
+if( a<b    
+{
+cout <<a<< "es alfabeticamente menor que "<< b;
+
+
+
+
+
+
+      6. Análisis de ejercicios y problemas
+Los algoritmos resuelven problemas. Por esta razón. el primer paso para diseñar un algoritmo es entender cuál es el problema que el algoritmo debe resolver.
+La comprensión del problema es tanto o más importante que el diseño del algoritmo que lo resuelve. Pues. difícilmente podremos diseñar un algoritmo que resuelva un problema que no llegamos a comprender en profundidad.
+Es fundamental adquirir una metodología cuyas técnicas nos ayuden a transitar el proceso de entendimiento y comprensión del problema por resolver.
+
+
+
+
+
+
+
+
+
+
+Aquí no propondremos ninguna metodología en particular. Pero. más allá de cuál sea la metodología que adoptemos. sus fases siempre serán las siguientes:
+
+
+   1. Identificar los registros de entrada. datos de contexto y salidas.
+   2. Entender cuáles son los procesos de transformación que. a partir de los registros de entrada y contexto. permiten generar los datos de salida.
+
+
+Seleccionaremos como ejemplo el enunciado del siguiente problema:
+Enunciado: Se introducen tres valores numéricos que corresponden al día. mes y año de una fecha. Se debe validar que la misma sea consistente. Esto significa que la fecha introducida no debería ser el 35 de enero o el 29 de febrero de un año que no es bisiesto. Se pide mostrar por consola un mensaje indicando si la fecha es correcta o no.    
+         15. Datos de entrada, de contexto y de salida
+Para el problema planteado. podemos identificar los siguientes datos de entrada. contexto y saIida_
+Datos de entrada, son los datos que introducirá el usuario:
+
+
+día - día del mes.
+a mes - mes del año. o año - año.
+Datos de contexto. son parte del contexto:
+
+
+Los días y meses se numeran a partir de 1-
+Cuántos días tiene cada mes (por ejemplo: enero tiene 31 días). Cuántos meses tiene cada año (12 meses).
+
+
+
+
+
+
+
+
+
+
+Febrero tiene 28 o 29 días. dependiendo de que el año sea o no bisiesto. Un año es bisiesto si es divisible por 4. o por 400 pero no por 100. Aunque el cálculo es algo más complejo que eso. aquí lo aceptaremos así.
+Datos de salida: qué le mostraremos al usuario. Según el enunciado mostraremos un mensaje indicando si los datos introducidos componen una fecha válida o no.
+
+
+         16. Procesos para transformar la entrada en salida
+Los procesos de transformación son las acciones que programaremos. Qué cálculos y decisiones debemos seleccionar para obtener la respuesta que espera el usuario.  
+
+
+
+
+<        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura 1.6. Proceso de transformación de entrada en salida
+
+
+En el caso del problema de validar la fecha introducida por el usuario, los procesos de transformación serán los siguientes:
+Validación de la fecha: será válida si el día. mes y año son válidos.
+Validación del día: el día (dato de entrada) debe ser mayor que cero. y menor o igual que la cantidad de días que tiene el mes (dato de entrada). Cuántos
+
+
+
+
+
+
+
+
+
+
+días tiene el mes es un dato de contexto.
+Validación del mes: el mes (dato de entrada) debe ser mayor que cero, y menor o igual a 12 (dato de contexto).
+Validación del año: el año (dato de entrada) debe ser un número entero positivo (dato de contexto).
+
+
+      7. Tipos de problema
+Dependiendo de cómo se proporcionan los datos o registros de entrada y qué salida queremos obtener, los problemas se pueden clasificar en diferentes tipos. Identificar el tipo de problema es muy importante. pues problemas similares requieren soluciones similares.
+
+
+         17. Problemas de registro simple y problemas de múltiples registros
+Los problemas de registro simple procesan un único juego de datos. también llamado registro. Por ejemplo. los siguientes enunciados describen problemas de este tipo:    
+
+
+   1. Se introduce un valor numérico, determinar si se trata de un número primo.
+   2. Se introducen tres valores numéricos diferentes entre sí. se pide determinar cuál es el menor. medio y mayor valor.
+   3. Se introducen los nombres y fechas de nacimiento de dos personas. se pide indicar el nombre de la persona más joven.
+En el problema 1.1, el juego de datos de entrada (o registro) consiste en un único valor numérico n. { n }.
+El problema 1.2 tiene un único registro de entrada compuesto por tres valores numéricos: { a,b,c }; una terna.
+
+
+
+
+
+
+
+
+
+
+En el problema 1.3. el registro de entrada está compuesto por un par de valores: cada uno compuesto por el nombre de una persona y una terna que describe su fecha de nacimiento:
+{ [noml, (dl,ml, al) J, [nom2, (d2,m2, a2) l
+Reformularemos estos enunciados para mostrar la diferencia entre un problema de registro simple y otro de múltiples registros.
+
+
+      1. Se introducen 100 valores numéricos. Por cada uno se pide determinar sí se trata de un número primo.
+      2. Se introduce un valor n. Luego se introducirán n ternas de valores numéricos diferentes entre sí. Por cada una de estas ternas se pide determinar cuál es el menor. medio y mayor valor.
+      3. Se introducen varios pares de valores. cada uno compuesto por el nombre de una persona y tres enteros que indican su fecha de nacimiento. Se pide indicar, por cada par. el nombre de la persona más joven.    
+Formulados así. los problemas 2.1. 2.2 y 2.3 procesan múltiples veces registros del mismo tipo que los procesados por sus predecesores 1.1. 1.2 y 1.3. que lo hacían una única vez. Los resultados que se espera obtener también son múltiples.
+En el problema 2.1 esperamos obtener exactamente 100 resultados: 100 mensajes indicando "El número introducido es primo" o "El número introducido no es primo"_
+En los problemas 2.2 y 2.3 también se espera obtener múltiples resultados.
+Tantos como registros el usuario vaya a introducir.
+
+
+1..1.7.2.  Multiplicidad
+
+
+
+
+
+
+
+
+
+
+Podemos ser más precisos y establecer una distinción sobre el tipo de multiplicidad que describe el enunciado del problema.
+En el problema 2.1 se indica que el usuario introducirá exactamente 100 registros. Diremos que se trata de un caso de multiplicidad fija.
+Cada vez que ejecutemos el algoritmo. el usuario introducirá exactamente
+100 valores. Dichos valores no necesariamente serán los mismos una y otra vez. pero sí podemos asegurar que siempre serán 100.
+El enunciado del problema 2.2 dice que se introducirán exactamente n registros. donde n es un valor que el usuario introducirá con anterioridad. A este tipo de casos los llamaremos de multiplicidad variable conocida, pues cada vez que se ejecute el algoritmo. el usuario podrá determinar qué cantidad de registros desea procesar.
+El problema 2.3 indica que se introducirán múltiples registros, pero no especifica cuántos. Se trata de un caso de multiplicidad variable desconocida. En casos como este. se debe establecer una señal para determinar que el usuario finalizó la carga de datos. Si el enunciado no indica explícitamente cuál es esta señal. tendremos que definirla nosotros mismos.    
+Por ejemplo. en el problema 2.3 el usuario introducirá varios registros como
+este:
+[noml, (dl,ml,al)J, [nom2, (d2,m2,a2)J  }
+Como el enunciado no da precisiones sobre cuál será la marca de
+finalización de la carga de datos. podemos establecer que se introducirá un nom1="ZZZ" para indicar que dicha carga de datos finalizó.
+
+
+1..1.7.3.  Registros y tablas
+
+
+
+
+
+
+
+
+
+
+Mientras que en el problema 1.1 la entrada de datos consiste en la introducción de un único valor numérico, la entrada de datos del problema 2.1 está compuesta por 100 valores numéricos.
+La siguiente imagen ilustra cómo podemos representar los datos de entrada de un problema. A la izquierda, vemos el único dato de entrada del problema 1.1. A la derecha, vemos los 100 valores que el usuario introducirá en el problema 2.1, que forman una tabla compuesta por 100 filas y una única columna.  
+  
+
+7
+	4
+	
+
+	18
+	
+
+Figura 1. 7. Comparación entre un registro simple y múltiples registros
+
+
+Cabe aclarar que todos estos valores son hipotéticos, ya que será el usuario quien decida qué valores va a introducir.  
+  
+
+7
+	11
+	6
+	23
+	2
+	8
+	2
+	14
+	1
+	Para comparar los datos de entrada de los problemas 1.2 y 2.2. diremos que un registro forma una fila, y varios registros forman una tabla compuesta por múltiples filas y columnas. Entonces, los datos de entrada de estos problemas generan la siguiente fila/tabla.
+  
+
+25        12        10
+  
+
+
+
+
+
+
+
+
+
+
+
+Curso de algoritmos y programación a fondo 2ed
+
+
+Figura 1.8. Entrada simple contra entrada múltiple
+Finalmente. los problemas 1.3 y 2.3 tienen los siguientes registros.
+  
+
+Martín        23        1        l  1995 ¡Germán 1        14        3        l 2003 I
+Figura 1.9. Entrada simple  
+
+
+Juan
+	5
+	6
+	1997        Alberto
+	3
+	12
+	1994
+	Pablo
+	14
+	2
+	2002        Nicolás
+	29
+	8
+	2002
+	Carlos
+	23
+	1
+	1995        Diego
+	16
+	3
+	1986
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	FIN
+	
+
+	
+
+Figura 1.10. Entrada múltiple  
+
+
+1.1.7.4.  Problemas de procesamiento horizontal y procesamiento vertical
+Esta clasificación nos ayudará a entender si los datos de salida que debemos generar surgirán de procesar una fila. una columna o una combinación de ambas.
+Los problemas 2.1. 2.2 y 2.3. planteados en el apartado anterior, son problemas de procesamiento horizontal, pues se espera obtener tantos resultados como filas (horizontal) sean introducidas. Cada uno de estos resultados se obtendrá procesando exclusivamente los datos de la fila en cuestión.
+Para comprender la diferencia entre ambos tipos de procesamiento, reformularemos los enunciados anteriores, de modo que para resolverlos deberemos utilizar el procesamiento vertical.
+
+
+
+
+
+
+
+
+16%
+
+
+
+
+
+
+
+
+
+
+   1. Se introducen 100 valores numéricos. indicar si su suma da un número primo.
+   2. Se introducen n ternas de valores numéricos diferentes entre sí. se desea calcular los promedios de los menores valores de cada terna. el promedio de los valores que se encuentran en el medio y el promedio de los mayores.
+   3. Se introducen varios pares de valores. donde cada uno está compuesto por el nombre de una persona y tres enteros que indican su fecha de nacimiento. Obtener el nombre de la persona más joven y el de la más vieja del conjunto.
+El problema 3.1 requiere mostrar un único resultado. que surge de procesar todo el conjunto de registros. Dicho proceso consiste en sumarlos y determinar si la suma es un número primo.
+Se trata claramente de un problema de procesamiento vertical.      
+
+
+4
+	6
+	2
+	5
+	7
+	
+
+24        No es primo
+Figura 1.11. Procesamiento vertical
+
+
+Por cuestiones de claridad y organización. el análisis lo hemos realizado sobre un conjunto reducido de datos. Lo mismo haremos en los casos sucesivos.
+
+
+
+
+
+
+
+
+
+
+En el problema 3.2 debemos procesar horizontalmente cada fila y determinar cuál es el menor. medio y mayor valor de la terna. Luego, procesaremos verticalmente estos resultados para calcular sus promedios.
+Menor        Medio        Mayor      
+
+
+4
+	7
+	5
+	6
+	1
+	13
+	2
+	3
+	9
+	24
+	15
+	8
+	9
+	10
+	2
+	
+
+4
+	1
+	2
+	8
+	2
+	
+
+5
+	6
+	3
+	15
+	9
+	
+
+7
+	13
+	9
+	24
+	10
+	
+
+
+
+3.4        7.6        12.6    
+Figura 1.12. Procesamiento mixto: horizontal y vertical
+
+
+Finalmente. el problema 3.3 consiste en determinar cuál es la persona más vieja y cuál la más joven de todo el conjunto de datos. La respuesta la obtendremos una vez que hayamos comparado las fechas de nacimiento de todas las filas. Se trata de un problema de procesamiento vertical.
+
+
+1..1.7.5.  Problemas de corte de control
+Los problemas de corte de control se caracterizan porque los datos de entrada se introducen respetando un determinado ordenamiento. De este modo podremos establecer subconjuntos de registros identificados por un valor común.
+
+
+
+
+
+
+
+
+
+
+Por ejemplo: se introducen varios registros. compuestos por tres valores numéricos, que representan el documento de registro de un estudiante, un mes, y la cantidad de faltas que dicho estudiante acumuló durante el mes en cuestión.
+  
+
+Figura 1.13. Representación gráfica de un registro
+
+
+Los datos se introducen ordenados por documento. Esto significa que todos los registros que corresponden a un mismo estudiante (documento) estarán agrupados.
+No se introducirán filas para indicar que no hubo faltas. De este modo, por cada estudiante tendremos un registro por cada mes en el cual se registró, al menos, una falta.    
+Se pide determinar para cada estudiante (identificado por su documento) qué cantidad de faltas acumuló durante el año: y obtener, al finalizar el proceso, el documento del estudiante con mayor cantidad de faltas.
+Para comprender cómo debemos procesar los datos. primero los tendremos que visualizar. Con el tiempo, esta visualización llegará a ser mental. pero inicialmente. tal como hicimos con los problemas anteriores. los representaremos gráficamente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Docu- mento
+	Mes
+	Faltas
+	
+
+
+
+
+
+
+
+
+
+
+
+Total faltas
+8
+Total faltas
+5
+	3
+	5
+	4
+	3
+	4
+	1
+	3
+	6
+	2
+	3
+	8
+	1
+	7
+	2
+	1
+	7
+	5
+	4
+	12
+	5
+	7
+	
+
+
+
+Total faltas
+9
+	12
+	4
+	1
+	12
+	8
+	1
+	14
+	3
+	2
+	Total faltas
+5
+	14
+	4
+	3
+	<        >
+Figura 1.14. Ejemplo de datos de un problema de corte de control
+
+
+Como vemos, los datos están ordenados por documento. Dado que por cada documento puede haber más de una fila, todas las filas que corresponden a un mismo estudiante se encuentran agrupadas.
+El conjunto de registros está dividido en subconjuntos, cada uno de los cuales representa las faltas anuales de un estudiante, discriminadas mes por mes.
+El enunciado no dice nada sobre un ordenamiento de segundo nivel, sólo aclara que los registros se introducirán ordenados por documento: pero a igual número de documentos, no necesariamente las filas estarán ordenadas por mes.
+
+
+
+
+
+
+
+
+
+
+El primer resultado que debemos obtener es la sumatoria (procesamiento vertical) de las faltas mensuales de cada estudiante. Esto requiere sumar los valores de la columna de faltas, controlando que las filas procesadas correspondan a un mismo documento. Haremos esto tantas veces como subconjuntos (identificados por documento) podamos distinguir dentro del conjunto general.
+Según el ejemplo. el estudiante cuyo documento es 3 faltó 8 veces a lo largo del año. El estudiante con el documento 7 faltó 5 veces. y así sucesivamente. Todos los demás estudiantes (aquellos que no figuran en la tabla) registraron una asistencia perfecta.
+Observemos que no conocemos los documentos de todos los estudiantes. Tampoco sabemos cuántos estudiantes existen. Sólo tenemos información sobre aquellos estudiantes que registraron. al menos. una falta durante el año.
+El problema también pide determinar cuál fue el estudiante con mayor cantidad de faltas. Esto requiere procesar la cantidad total de faltas de cada estudiante. En este caso. el resultado será único (el estudiante que más veces faltó). y estará disponible después de que hayamos procesado todos los subconjuntos.    
+NOTA: Podría suceder que dos o más estudiantes registren la mayor cantidad de faltas. Por ejemplo: tres estudiantes faltaron 15 veces. y ningún otro alumno faltó tanto. Sin embargo, este tipo de situaciones no las tendremos en cuenta. porque por el momento no contamos con las herramientas necesarias para poderlas resolver.
+
+
+   8. Autoevaluación y ejercicios
+
+
+Durante esta lección profundizaremos sobre el tipo de dato. e introduciremos un concepto fundamental de programación: funciones; además de otros temas relacionados como argumentos. parámetros. bibliotecas y reusabilidad del código fuente.  
+
+
+   1. Tipo de dato
+Como ya sabemos, a través de las variables podemos guardar datos en la memoria del ordenador. Sin embargo, el espacio de memoria que representa una variable debe tener una preparación especial, que dependerá de cuál es el tipo de dato del valor que guardaremos allí.    
+
+
+
+
+
+
+
+
+<        Autoevaluación        >  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicios
+________________
+Lección 2
+
+
+Por ejemplo, el nombre de una persona es de tipo string (cadena de caracteres). Lo mismo sucede con una contraseña. una descripción o una dirección de correo electrónico.
+En cambio. la edad de una persona. la cantidad de cuotas en que decidimos pagar un producto, o la cantidad de materias que cursaremos en la facultad son
+         datos de tipo numérico entero: int.
+   2. Lección 2
+________________
+El saldo de una cuenta corriente. la altura de una persona o el precio de un producto son datos de tipo numérico real o flotante: double.
+
+
+
+
+Tipo
+	En C++
+	Longitud
+	Numérico
+	Entero
+	char
+	1 byte
+	short
+	2 bytes
+	int
+	4 bytes
+	long
+	4 bytes
+	long long
+	8 bytes
+	Real
+	float
+	4 bytes
+	double
+	8 bytes
+	Alfanumérico
+	string
+	n+1 bytes
+	Lógico
+	bool
+	1 byte
+	Nulo
+	void
+	
+
+	
+
+Tabla 1.9.Tipos de dato, codificación y longitud en C++  
+
+
+Los lenguajes de programación establecen tipos de dato que usaremos para indicar cuál será el tipo del valor que guardaremos en el espacio de memoria representado por una variable. La tabla 1.9. muestra los diferentes tipos de dato, clasificándolos en cuatro grupos principales.
+Cada tipo define una cantidad de bytes de memoria destinada a guardar el dato de la variable; y también establece cómo deben interpretarse los unos y ceros que componen dichos bytes.
+
+
+   1. Tipos enteros
+________________
+valor más grande que podremos guardar en una variable de tipo short seforma con 16 unos (dígitos binarios). y el más pequeño se forma con 16 ceros.
+11111111111111111
+1    
+Como el número binario compuesto por 16 dígitos 1 equivale al número decimal 216=65536, en principio. una variable short admite valores numéricos comprendidos entre o y 65535.
+Sin embargo, el tipo short, así como todos los otros tipos enteros, está preparado para admitir valores negativos. Para esto. el bit más significativo (el que se ubica más a la izquierda) se considera bit de signo. y no tiene valor numérico. Sólo es un indicador del signo del número que está guardado en el espacio de memoria que representa la variable: O(cero) si es positivo, 1 (uno) si es negativo.  
+Así. el mayor valor numérico entero que podemos guardar en una variable short consiste en un O seguido de 15 dígitos 1. Esto equivale a 215-1 = 32767.
+01111111111111111
+--------1--------
+El valor más negativo admitido por un short está compuesto por un 1 seguido de 15 dígitos 1. Esto es: -32767.
+11111111111111111
+--------1--------
+Como el valor numérico O (cero) se considera parte de los positivos. la totalidad de las variaciones negativas representarán valores entre -1 y-32768.
+Según la tabla anterior. el tipo short (por ejemplo) representa 2 bytes de la        En otraspalabras, unavariablev detipo shortadmite guardarvalores memoria del ordenador. Dado que cada byte consiste en un conjunto de 8 bits, el comprendidos dentrodelsiguiente rangonumérico-:32768<= v<= 32767.
+
+
+Si sabemos de antemano que en una variable de tipo entero no guardaremos números negativos. podemos omitir el bit de signo utilizando la palabra unsigned. unsigned  short  a;
+Esto hará que todos sus bits. incluyendo al más significativo. sean utilizados para representar la magnitud del número. En este caso. la variable a admitirá valores que van desde O hasta 65535; que equivale a 16 dígitos 1: 216-1.
+El mismo análisis también es aplicable a los tipos int, long y char.
+En general, una variable v cuyo tipo de dato es numérico entero, según tenga o no bit de signo. admite valores comprendidos dentro de los rangos que se indican en la siguiente tabla. donde n es la cantidad de bits representados por el
+tipo de dato.  
+
+
+
+
+<  
+Tabla 1.10. Rangos numéricos admitidos por los tipos de dato entero
+________________
+Como vemos. en los 4 bytes de una variable de tipo float se representan el signo del número. un exponente y una mantisa. La mantisa es la magnitud y el exponente es la coma o punto flotante.
+Se considera que los 8 bits del exponente colocados en O representan el valor -127. Es decir: la magnitud que indica la mantisa con una coma desplazada 127 lugares hacia la izquierda. Estos 8 bits colocados en 1 representan el valor
+127 e indican que la mantisa lleva una coma desplazada 127 lugares hacia la derecha. El bit de signo establece si se trata de un número positivo o negativo.
+El tipo double es similar. pero ofrece mucha mayor precisión, ya que utiliza 8 bytes de memoria. En la práctica, sólo utilizaremos el tipo double.
+
+
+   3. Tipos alfanuméricos
+El tipo s t r ing permite guardar una cadena de caracteres. que consiste en una sucesión de caracteres individuales de tipo char. Internamente. la cadena finaliza con un carácter especial que llamaremos '\O' (barra cero).  
+string s = "Pablo";
+
+
+int.
+________________
+En la práctica, no utilizaremos los tipos short  ni  long, sólo usaremos
+
+
+
+
+   2. Tipos flotantes
+________________
+
+
+  
+
+        p        a        b        o        \O 
+
+
+Figura 1.15. Representación interna de una cadena de caracteres
+Sobre los tipos reales, su estructura interna está preparada para contener una magnitud (mantisa) y un punto flotante representado por un exponente.
+--------1--------1--------1--------
+01111111111111111111111111111111111
+<- exp -><----- mantisa        >
+________________
+El carácter '\O' es automático. Por esta razón será poco frecuente que tengamos que agregarlo nosotros mismos al final de una cadena. Como este tema lo abordaremos en detalle más adelante. aquí sólo lo trataremos superficialmente.
+Los caracteres tienen asociado un código numérico llamado código ASCII. Por ejemplo: el código ASCII del carácter 'A' es 65. El código del carácter ·s·es 66 y así sucesivamente. Por su parte. el código del carácter ·o·es 48, el código del
+carácter '1' es 49. el código del carácter ·2· es 50. etcétera.
+
+
+Aunque intuitivamente podemos pensar que char es un tipo de dato alfanumérico, internamente se trata de un tipo numérico entero, pues las variables de este tipo guardan el número del código ASCII de un carácter.
+________________
+bool a bool b
+________________
+true; false;
+Por lo anterior, las siguientes líneas son equivalentes.
+
+
+char  e =  'A' ; 1 char e = 65;
+
+
+Figura 1.16. Representación literal y numérica (ASCII) de un carácter
+
+
+En el lado izquierdo, le asignamos a la variable c el carácter A a través de su expresión literal. En el lado derecho, lo hacemos mediante su código ASCII.
+Si entendemos que 'A' es un número entero (65), no nos sorprenderemos al ver expresiones como la siguiente. En tal caso diremos que d vale 66 o ·s·_
+char d = 'A'+l;  
+Es importante comprender la diferencia entre cadenas litera/es y caracteres
+/itera/es. Aunque podríamos pensar que se trata de lo mismo, claramente no lo es.
+
+
+char e = 'A'; 1 string s = "A";
+
+
+Figura 1.17. Comparación entre un carácter y una cadena
+________________
+Por ejemplo, en el siguiente programa la salida será "Los valores ingresados son iguales? true o fa/se", dependiendo de qué datos introduzca el usuario.
+
+
+// declaro y leo por consola
+int a,b;
+cin        >>a>> b;
+
+
+//asigno el valor logico de la expresion a==b
+bool soniguales = (a==b);
+
+
+// muestro por consola
+cout << "los valores ingresados son iguales?"<< soniguales;
+La expresión (a==b) es una expresión lógica cuyo valor de verdad dependerá        >
+de qué valores tengan asignadas ambas variables. Los paréntesis no son
+obligatorios. pero aportan algo de claridad.
+
+
+   5. Tipo de dato nulo
+El tipo void se utiliza para indicar que una función no devolverá ningún valor. Esto
+La variable c (del lado izquierdo) guarda un valor numérico entero (65). lo veremos más adelante. representado en 1 byte con bit de signo. En el lado derecho. la variable s
+representa 2 bytes de memoria: "A \O".
+
+
+   4. Tipos lógicos
+Los valores lógicos, true (verdadero) o false (falso). se pueden asignar en variables tipo bool.
+________________
+   6. Tipos de dato primitivos y tipos definidos por el programador
+Los lenguajes de programación permiten que los programadores declaren sus propios tipos de dato. Por esto. agregaremos a la tabla de tipos que analizamos anteriormente una súper categoría que nos permitirá diferenciar entre tipos primitivos y tipos de dato definidos por el programador.
+
+
+Los tipos de dato primitivos son parte del lenguaje. En cambio, para declarar C++, string es una clase; no es un tipo de dato primitivo. nuevos tipos de dato utilizaremos recursos provistos por el lenguaje de
+programación.        1.2.2.        Alcance de una variable
+En general, existen tres mecanismos a través de los cuales un programador Como ya mencionamos, los bloques de código se delimitan mediante llaves. Muy puede declarar sus propios tipos de dato:        probablemente, un bloque de código puede incluir otros bloques, los cuales
+también podrían incluir más bloques de código
+   1. La palabra typedef.
+   2. Las estructuras  ( struct).
+   3. Las clases (class), de Programación Orientada a Objetos (POO).
+________________
+Cuando declaramos una variable, esta sólo existirá dentro del bloque de código en el que fue declarada, y también en todos sus subbloques.
+En el siguiente ejemplo, vemos que el bloque de la función main incluye al bloque del while, que incluye los bloques del if yelse. Y dentro de estos bloques
+Por ejemplo, typedef permite asignar una especie de alias a un tipo de de código declaramos algunas variables. dato ya existente; tal como lo observamos en el siguiente código, donde usamos
+typedef para declarar el tipo de dato Entero.    
+
+
+
+
+// ahora Entero es sinonimo de int
+typedef int Entero;
+
+
+int main()
+{
+// declaro tres enteros Entero a,b,c;
+//:
+return O;
+
+
+
+
+
+
+Las estructuras ( struct) se estudiarán más adelante, mientras que las clases de POO exceden el alcance de este curso. Pero sí mencionaremos que, en
+
+
+
+
+int a;
+
+
+int main()
+{
+________________
+Finalmente. la variable a es una variable global. Puede ser usada dentro de cualquier bloque de código. Sin embargo, el uso de variables globales es Inadmisible por considerarse una pésima práctica de programación.
+int b;
+while(
+{
+int e;
+if(
+{
+int d;
+}
+else
+{
+int e;
+
+
+<        return O;
+
+
+
+
+La variable b es válida desde el inicio y hasta el final de la función main. Podemos utilizarla en cualquier parte del programa (dentro del while, if y else).
+La variable c está declarada dentro del while. por lo que sólo podremos utilizarla allí y dentro de los subbloques del if y else.
+d y e sólo podrán ser utilizadas en el if y else respectivamente. Esto quiere decir que si dentro del else intentamos hacer cout<<d, tendremos un error de compilación indicando que la variable d no está declarada; no existe.
+________________
+   3. Metodología Top-Down
+Comenzamos el capítulo analizando el algoritmo que resuelve el problema de cruzar una calle. Ya hemos visto que. si no se aproximan coches. entonces, efectivamente. podemos cruzar. Pero cruzar implica bajar el borde. caminar hacia el otro borde y subir el borde de la acera de enfrente.
+Bajar el borde también es un algoritmo en sí mismo, que está compuesto por: levantar un pie. adelantarlo, bajarlo. levantar el otro pie. adelantarlo y bajarlo. Incluso. levantar un pie también es un algoritmo que podría implicar: acelerar e/ pulso cardíaco. irrigar /os músculos de la pierna, contraerlos. etcétera.  
+La metodología Top-Down se emplea para dividir un problema en varios subproblemas más pequeños y específicos. los cuales también pueden ser divididos en subproblemas. y así sucesivamente hasta que no se justifique seguir dividiendo.
+1..2.3.1..  Funciones
+En C++ los programas se implementan como funciones. De hecho, ya mencionamos la función main que implementa el programa o algoritmo principal.
+A medida que los algoritmos se vayan tornando más complejos indefectiblemente tendremos que dividirlos en algoritmos más pequeños y específicos, que también implementaremos como funciones.
+Una función es un subprograma que. a partir de un conjunto de parámetros, realiza una tarea específica y devuelve (o retorna) un valor.
+
+
+Por ejemplo: queremos desarrollar un programa donde el usuario introducirá una fecha, y validaremos que los datos introducidos sean consistentes. Es decir, que no introduzca: 35 de enero, o 29 de febrero de un año no bisiesto.
+Veamos cómo. en el programa principal (función main). podemos resolver la interacción con el usuario y abstraernos de la lógica necesaria para validar la fecha. Esto es posible porque invocamos a la función valictarFecha.
+
+
+int main()
+{
+// el usuario ingresa (introduce) la techa
+int dia,mes,anio;
+
+
+
+
+
+
+cout << "Ingrese dia, mes y anio:"; cin >> dia >>mes>> anio;  
+
+
+// validamos la techa ingresada (introducida)
+bool fechaOk = validarFecha(dia,mes,anio);
+
+
+//sino es correcta mostramos un error if( ! fechaOk )
+{
+________________
+La función valictarFecha recibe tres parámetros: día, mes y año, y devuelve un valor lógico indicando sí los parámetros recibidos componen una fecha válida o no.
+Si nos pudiésemos abstraer de cuántos días tiene el mes, validarFecha resultará relativamente simple. Por eso, nos apoyaremos en la función ctiasDelMes, que nos permitirá avanzar sobre la solución de nuestro problema actual.
+
+
+bool validarFecha(int dia,int mes,int anio)
+{
+// cuancos dias tiene el mes
+int maxDias = diasDelMes(mes,anio);
+
+
+//sise cumplen las condiciones, la techa es correcta
+bool ret;  
+if( (dia>0 && dia<=maxDias) &&
+(mes>0 && mes<=l2) && (anio>=0)
+
+
+ret = true;
+}
+else
+{
+cout << "La fecha ingresada es incorrecta";
+}
+else
+{
+________________
+ret        false;
+cout << "Todo bien:-)";
+
+
+
+
+return O;
+________________
+
+
+return ret;
+
+
+El próximo paso será resolver la función diasDelMes, que consiste en preguntar si se trata de un mes de 30 o de 31 días. Salvo que se trate del mes 2 (febrero). en cuyo caso la cantidad de días dependerá de que el año sea o no bisiesto.
+La función esAnioBisiesto nos ayudará a abstraernos de este problema.
+________________
+
+
+int diasDelMes(int mes,int anio)
+{
+// en principio son 31 dias
+int dias=31;
+// si es uno de los meses de 30 dias
+if( mes==4 11 mes==6 11 mes==9 11 mes==ll
+{
+dias=30;
+
+
+else
+{
+if( mes==2) // es febrero???
+{
+// si el anio es bisiesto entonces son 29 dias
+if( esAnioBisiesto(anio) )
+{    
+dias=29;
+}
+else
+{
+dias=28;
+
+
+
+
+
+
+return dias;
+
+
+
+
+Finalmente. tenemos que desarrollar la función esAnioBisiesto.Aunque el cálculo que determina si un año es bisiesto sea un poco más complejo, aquí aceptaremos que un año es bisiesto si es divisible por 4. o por 400 pero no por 100.
+
+
+
+
+bool esAnioBisiesto(int anio)
+{
+bool esBisiesto = false;
+
+
+// es divisible por 4?
+if( anio!i<4==0)
+{
+esBisiesto=true;
+}
+else
+{
+________________
+No es necesario mencionar los nombres de los parámetros; sólo interesa la posición que ocupan y su tipo de dato. Aun así. también es correcto incluir los nombres de los parámetros. lo cual resulta muy útil si acompañamos al prototipo de la función con algunas líneas de documentación. Como en el siguiente caso:
+
+
+// Esta funcion retorna true o false segun determine
+// que dia, mes y anio componen una fecha valida o no
+bool validarFecha(int dia,int mes,int anio);
+if( anio%400==0 && anio%100!=0
+{
+esBisiesto=true;
+
+
+
+
+<        return esBisiesto;
+
+
+   2. Prototipo de una función
+El prototipo de una función es su encabezado: qué parámetros recibe, cuáles son sus tipos de dato. el nombre de la función y cuál es el tipo de dato del valor de retorno. Por ejemplo. los prototipos de las funciones que utilizamos en el ejemplo anterior para validar que el usuario haya introducido una fecha correcta son:
+bool validarFecha(int,int,int); int diasDelMes(int,int);
+bool esAnioBisiesto(int);
+________________
+   3. Compilar un programa que invoca funciones
+El código fuente de una función debe estar ubicado antes de su invocación. Esto quiere decir que. si en el programa principal invocamos a validarFecha. su código fuente debe estar colocado arriba del código de la función main.  
+Si en valictarFecha invocamos a ctiasDelMes.el código fuente de esta última debe colocarse arriba del código de la primera. y así sucesivamente.
+En el siguiente ejemplo vemos el desarrollo de la función f. y seguidamente la función main que la invoca.
+
+
+int f() // codigo de la funcion f
+{
+//        ...
+
+
+int main() // programa principal  
+{
+f ();
+//  ...
+
+
+Otra opción sería describir el prototipo de la función antes de su invocación; y luego, en cualquier parte del código fuente, desarrollarla.
+
+
+// prototipo de f
+int f ();
+// programa que invoca a f
+int main()
+{
+f ();
+//  ...
+________________
+Recordemos el código de la primera versión de esAnioBisiesto.
+
+
+
+
+bool esAnioBisiesto(int anio)
+{
+bool esBisiesto = false;
+
+
+// es divisible por 4?
+if  ( anio%4==0 )
+{
+esBisiesto=true;
+
+
+else
+{
+
+
+// desarrollo completo de la funcion f
+int f ()  
+{
+//  ...
+________________
+if( anio%400==0 && anio%100!=0
+{
+esBisiesto=true;  
+>
+return esBisiesto;
+
+
+Como un programa puede estructurarse en cientos o miles de funciones, tener todo el código fuente en el mismo archivo puede tornarse muy complejo. Este problema lo abordaremos más adelante.
+1,2.3.4.  Reusabilidad del código
+Las funciones no sólo sirven para estructurar un programa, también permiten reutilizar diferentes porciones del código fuente.
+Seleccionaremos como ejemplo la función esAnioBisiesto, que ya resolvimos y utilizamos para validar una fecha. Aceptaremos que un año es bisiesto cuando es divisible por 4, o por 400 pero no por 100.
+________________
+
+
+
+
+
+
+
+
+Ahora veremos una nueva versión de esAnioBisiesto que invoca a la función esDivisiblePor para determinar si el año es o no divisible por 4, 100 y 400.
+Esta nueva versión resulta ser algo más legible que la anterior porque no expone las operaciones del tipo anio%4==0,que podrían resultar confusas.
+
+
+bool esAnioBisiesto(int anio)
+{
+________________
+esBisiesto=true;
+bool esBisiesto = false;
+if( esDivisiblePor(anio,4)
+{
+________________
+return esBisiesto;
+esBisiesto=true;
+}
+else
+{
+if(esDivisiblePor(anio,400) &&
+!esDivisiblePor(anio,100))
+
+
+esBisiesto=true;
+________________
+Todavía podemos mejorar el código un poco más. La siguiente expresión lógica tiene valor de verdad true o false.
+esDivisiblePor(4) or esDivisiblePor(lOO) and
+!esDivisiblePor(lOO)
+Así que esAnioBisiesto podría limitarse a devolver dicho valor de verdad.
+
+
+<        return esBisiesto;        bool esAnioBisiesto(int anio)        >  
+
+
+
+
+Incluso, podemos reordenar el código para que se aproxime tanto como sea posible a la definición de año bisiesto.
+
+
+bool esAnioBisiesto(int anio)
+{
+bool esBisiesto = false;
+// es divisible por 4, o por 400 y no por 100
+if(esDivisiblePor(anio,4) or esDivisiblePor(anio,400) and
+!esDivisiblePor(anio,100) )
+________________
+// es divisible por 4 o por 400 y no por 100
+return esDivisiblePor(anio,4) or (esDivisiblePor(anio,100) and
+!esDivisiblePor(anio,100));
+
+
+
+
+Ahora, desarrollaremos la función esDivisiblePor,cuyo código es trivial.
+
+
+bool esDivisiblePor(int a,int b)
+{
+return atb==O; //sial dividir a por bel resto es O ...
+
+
+Podríamos reutilizar esDivisiblePor para resolver otras funciones,                Cuando desarrollamos funciones reutilizables y las colocamos en archivos como por ejemplo esPar y esImpar.        independientes construimos nuestra propia biblioteca de funciones. Asimismo, los
+lenguajes de programación proveen sus propias bibliotecas.  
+
+
+bool esPar(int n)
+{
+return esDivisiblePor(n,2);
+________________
+
+
+bool esimpar(int n)
+{
+return !esDivisiblePor(n,2);
+}
+________________
+Por ejemplo: las funciones log y sqrt que calculan, respectivamente, el logaritmo natural y la raíz cuadrada del argumento que reciben como parámetro son parte de la biblioteca math.h de C++. Por el momento, no profundizaremos en cómo construir una biblioteca de funciones, pues este tema lo abordaremos en detalle a partir del siguiente capítulo.
+Con esDivisiblePor también podríamos implementar esMultiploDe.
+
+
+
+
+bool esMultiploDe(int a,int b)
+{
+return esDivisiblePor(a,b);  
+
+
+
+
+Hay que subrayar que cuanto más pequeñas son las piezas de código que desarrollamos, mayores serán las posibilidades de que las podamos reutilizar.
+
+
+1,2.3.5.  Legibilidad del código fuente
+Las funciones ayudan a incrementar la legibilidad: por eso, es deseable que el código fuente de los programas sea fácil de comprender. La legibilidad favorece la mantenibilidad, porque ante la ocurrencia de un error resultará más simple identificar dónde se produjo y así solucionarlo.
+
+
+   6. Bibliotecas de funciones
+El código de las funciones debe estar colocado en archivos independientes. Esto permite que una misma función pueda ser invocada por diferentes programas.
+________________
+
+
+   7. Convención de nombres de funciones
+Por convención, los nombres de las funciones se escriben en minúscula. Si el nombre está compuesto por dos o más palabras, cada inicial (excepto la primera) debe colo carse en mayúscula. Algunos ejemplos son:  
+
+
+double calcularPromedio(){ //...    
+int diasDelMes(){ //... }  
+void mostarMensaje(){ //... }
+
+
+
+
+   8. Parámetros y argumentos
+Llamamos argumentos a los valores que le pasamos a una función. Por su parte, la función recibe esos valores como parámetros.
+En la siguiente imagen. invocamos a la función validarFecha y le pasamos las variables dia.mes y anio como argumentos. Desde el punto de vista de la función. esta recibe sus valores en los parámetros d. my a.
+
+
+// :
+bool fechaOk        validarFecha(dia,mes,anio)  
+
+
+// :
+
+
+bool validarFecha(int d, int        m, int  a)
+{
+/ /  ...
+________________
+
+
+int main()
+{
+int x,y;
+cin >> x >> y;
+
+
+// permuto los valores permutar (x, y) ;
+
+
+cout << x <<y<< endl; return O;
+________________
+
+
+void permutar(int a,int b)
+{  
+int aux = a;
+a=        b;
+b = aux;
+return;
+
+
+Figura 1.18.Argumentos y parámetros
+
+
+Los nombres de los argumentos no tienen por qué coincidir con los nombres                Si el usuario introduce 5 y 10 (para x e y respectivamente) se espera que la de los parámetros. Lo que sí debe coincidir es la posición.        salida del programa sea 10 y 5. asumiendo que al invocar la función permutar
+sus valores fueron permutados.    
+   9. Parámetros por valor y referencia
+Sin embargo, dado que la función trabajó con copias de x e y contenidas en
+El parámetro recibe una copia del valor del argumento. Por esto. si en la función modificamos el valor de algún parámetro. esa modificación sólo tendrá alcance local y no trascenderá más allá de la misma función.
+En el siguiente ejemplo, a la derecha, vemos que la función permutar recibe dos parámetros y permuta sus valores. En el programa de la izquierda leemos dos valores por consola; los permutamos y mostramos los valores.
+¿Permutados?
+________________
+a y b, después de finalizar su ejecución, x e y no resultarán modificados.
+Para que una función pueda modificar los valores de los argumentos que recibe como parámetros. debe recibirlos por referencia. Para esto, basta con anteponer el símbolo & (ampersand) al nombre del parámetro que la función necesita modificar.
+
+
+void permutar(int& a,int& b)
+{
+int aux = a;
+a=        b; b = aux; return;
+
+
+
+
+
+
+
+
+Ahora sí podemos decir que a y b son x e y. Las modificaciones que hagamos sobre estos parámetros las estaremos haciendo en sus respectivos argumentos.
+Observemos que la función permutar no devuelve ningún valor. Por esta razón. el tipo de dato de su valor de retorno es voict (nulo). Esto no guarda ninguna relación con el hecho de que la función reciba parámetros por valor o referencia.
+   10. Variables locales
+Las variables que declaramos dentro de una función son variables locales y existen dentro de la función. y mientras dure su ejecución.
+________________
+
+
+int main()
+{
+int a=        5;
+
+
+// invoco a f
+f () ;
+
+
+cout <<"En main: 11<<a;
+
+
+return O;
+________________
+
+
+void f ()
+{  
+int a        10;
+cout ce "En la funcion: "cea;
+
+
+return;
+En la función permutar. por ejemplo. la variable aux es una variable local. Los parámetros a y b. independientemente de que se reciban por valor o referencia, también son variables locales. Todas dejarán de existir al finalizar la invocación.  
+Veamos el siguiente caso: en el programa principal (función main) declaramos la variable a y le asignamos el valor 5. Luego, invocamos la función f. que declara otra variable a y le asigna el valor 10.
+La variable a de la función main no tiene nada que ver con la variable a de la función f. Por eso. cuando en la función f mostramos el valor de a la salida será
+10. Luego, al finalizar la función. volvemos al programa principal y mostramos el valor de la variable a. En este caso. será 5. ya que su valor nunca fue alterado.
+________________
+   4. Autoevaluación y ejercicios
+
+
+>  
+
+
+
+
+
+
+  
+
+Autoevaluación
+
+
+
+
+
+
+
+
+  
+          
+Ejercicios        Lección 3
+
+
+
+
+  
+
+   3. Lección 3
+Durante esta lección, aprenderemos a usar estructuras ( struct) para diseñar nuevos tipos de dato, creados por nosotros mismos, que nos ayudan a representar elementos de la vida real y ocultar la complejidad de sus operaciones relacionadas.  
+
+
+   1. Estructuras
+Las estructuras permiten crear nuevos tipos agrupando datos que tienen coherencia entre sí. Como ejemplo, veremos la estructura Fecha,que agrupa tres datos: día, mes y año.
+La fecha está compuesta por un día, mes y año. Estos datos son coherentes entre sí, ya que dia representa un día del mes, y mes representa un mes del año anio.Los tres datos identifican una fecha.
+________________
+struct Fecha
+{
+int dia; int mes; int anio;
+} ;  
+
+
+
+
+Después de definir una estructura, queda establecido un nuevo tipo de dato que podremos utilizar para declarar variables.
+
+
+// declaro una fecha
+Fecha fl; fl.dia = 2;
+fl.mes = 10;
+fl.anio = 1970;
+
+
+// declaro otra fecha
+Fecha f2; f2.dia = 15;
+f2.mes = 12;
+f2.anio = 1985;
+
+
+Las estructuras agrupan datos que llamaremos campos. La estructura        Los dos modos de inicialización son correctos; probablemente el segundo
+Fecha tiene tres campos: dia, mesyanio.        sea más práctico que el primero.
+Para simplificar. a las variables cuyo tipo de dato sea una estructura también podremos llamarlas estructuras. Para asignar valor a los campos de una estructura utilizamos el operador . (punto) como separador. Por ejemplo:  
+
+
+Fecha fl;        // declaro la variable fl tipo Fecha
+fl.mes = 10; // asigno 10 al campo mes
+________________
+
+
+Asignando campo por campo
+
+
+Fecha f; f.dia = 2;
+f.mes = 10;
+f.anio = 1970;
+________________
+
+
+Asignando el conjunto de valores
+Fecha f = {2,10,1970);
+
+
+Gráficamente. representamos a la estructura Fecha del siguiente modo:
+  
+
+  
+
+<        Figura 1.19. Representación de la estructura Fecha
+   1. Inicialización de una estructura
+Cuando asignamos un valor inicial a los campos de una estructura decimos que la
+inicializamos. Esto podemos hacerlo de tres modos diferentes:
+
+
+   1. Asignando los valores de sus campos. uno por uno.
+   2. Asignando el conjunto completo de los valores de sus campos.
+   3. Creando una función de inicialización (lo veremos más adelante).
+
+
+En la siguiente tabla. a la izquierda. asignamos uno a uno los valores de los campos de una variable de tipo Fecha. A la derecha. declaramos la variable y le asignamos el conjunto completo de valores que queremos que sus campos tengan.
+________________
+
+
+Tabla 1.11. Inicialización de una estructura.
+
+
+   2. Convención de nombres de estructuras
+Por convención. los nombres de las estructuras deben escribirse en minúscula. a excepción de la primera letra. que deberá colocarse en mayúscula. Si el nombre se compone de dos o más palabras. cada inicial debe estar en mayúscula.  
+Algunos ejemplos son:
+
+
+
+
+struct Persona
+{
+//        ...
+} ;
+
+
+struct CuentaCorriente
+{
+//        ...
+
+
+
+
+   3. Función de inicialización de una estructura
+
+
+La función de inicialización de una estructura es una función creada con el único  inicialización.  A  continuación.  la  estructura  Persona con  los  campos objetivo de asignar valores iniciales a los campos de la estructura. Por convención. fechaNacimiento (tipo Fecha)y ctireccion (tipo Direccion).
+esta función debe tener el mismo nombre que la estructura para la cual fue
+creada, aunque comenzando con minúscula. De esa forma, se respeta la
+convención de nomenclatura establecida para las funciones.
+A continuación, veremos dos modos válidos de implementar la función de inicialización (o init function) para la estructura Fecha.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<
+Al disponer de la función de inicialización, podemos crear e inicializar muy fácilmente variables tipo Fecha.  
+________________
+// estructura direccion
+struct Direccion
+{
+string calle; int numero; int piso;
+char departamento;
+string codigoPostal; // ej: C1432BQZ
+
+
+Direccion direccion(string c,int n,int p,char d,string cp)
+{
+return {c,n,p,d,cp};
+>
+// estruccura Persona
+struct Persona
+{
+
+
+
+
+// creamos dos techas
+Fecha fl        fecha(2,10,1970); Fecha f2 = fecha(21,3,1992);
+________________
+string nombre;
+int dni;
+Fecha fechaNacimiento; Direccion direccion;
+} ;
+________________
+
+
+estructura anidada estructura anidada
+
+
+
+
+   4. Estructuras anidadas
+________________
+Como los campos de una estructura pueden ser estructuras en sí mismos, el operador . (punto) nos permitirá hacer referencia a los campos de los campos de la
+Los campos de una estructura pueden ser de cualquier tipo, incluso una estructura. Para darles valor inicial podemos hacerlo directamente, tal como vemos estructura. Veamos la estructura Direccion,con su correspondiente función de a la izquierda, usar el operador [) (llave) como vemos a la derecha, o hacerlo a
+
+
+través de sus correspondientes funciones de inicialización, como vemos más abajo.
+________________
+   2. Tipo Abstracto de Dato (TAD)
+Tipo Abstracto de Dato (en adelante TAD) es un concepto que nos permite crear tipos de dato para representar objetos (elementos) de la vida real, con el objetivo
+Persona p;
+p.nombre = "Pablo"; p.fechaNacimiento.dia 2;
+
+
+
+
+Persona p; p.nombre = "Pablo";
+________________
+Persona p; p.nombre = "Pablo";
+p.fechaNacimiento={2,10,1970};
+________________
+de abstraernos de su implementación y la complejidad asociada a sus operaciones. Por ejemplo una fecha, un número fraccionario o cualquier otro elemento de la vida cotidiana que necesitemos manipular en nuestros programas.
+Un TAD está compuesto por dos partes: una estructura para guardar datos, y un conjunto de funciones diseñadas para manipular los datos de la estructura.
+TAO = Datos + Funciones
+p.fechaNacimiento = fecha(2,10,1970);
+p.direccion = direccion("El Alamo",25,1,'B',"1432");
+
+
+Por supuesto que el modo más prolijo de crear una variable de tipo Persona es a través de su función de inicialización, cuyo código veremos a continuación.  
+
+
+Persona persona(string n,int dni,Fecha fec,Direccion dir)
+{
+return {n,dni,fec,dir};
+}
+________________
+Por convención, los nombres de las funciones llevarán como prefijo el
+nombre de la estructura (comenzando en minúscula), que a su vez será el nombre del TAD.
+Para comprender la idea, comenzaremos analizando un programa que usa el TAD Fecha, asumiendo que dicho TAD ya está programado y listo para ser utilizado.  
+En el siguiente ejemplo, le pedimos al usuario que introduzca un día, mes y año: y con esos datos creamos una fecha. Luego, le pedimos que introduzca una cantidad de días y sumamos dicha cantidad a la fecha anterior. Así. obtenemos una nueva fecha que mostraremos por consola.
+
+
+Ahora, podemos crear una variable de tipo Persona de la siguiente manera:
+
+
+Persona p        persona( "Pablo"
+,23342124
+,fecha(3,12,1985)
+,direccion("El Alamo",25,1,'B',"1432"));
+
+
+int main()
+{
+// pedimos un dia, mes y anio
+int d,m,a;
+cout << "Ingrese dia, mes y anio:";
+cin >> d >> m >> a;
+//        creamos un objeto fecha con los datos ingresados (introducidos)
+Fecha fl = fecha(d,m,a);
+cout << "Usted ingreso la fecha:"<< fechaToString(fl);
+// pedimos que introduzca una cantidad de dias
+int n;
+cout << "Ingrese una cantidad de dias: ";
+cin  >>  n;
+// le sumamos n dias a la fecha anterior
+Fecha f2 = fechaAddDias(fl,n);  
+// obtenemos una cadena que representa la fecha f2
+string s = fechaToString(f2);
+cout << 11Dentro de "<< n << " dias sera: " << s;
+return O;
+
+
+
+
+En el código anterior aceptamos que disponemos de la estructura Fecha y las funciones fecha (función de inicialización), fechaTostring y fechaAddDias.
+Observemos que en el programa no fue necesario manipular ninguno de los campos de la estructura Fecha. Es más, ni siquiera sabemos si se trata de la misma estructura Fecha que estudiamos previamente. pues no tuvimos la necesidad de conocer su implementación.
+________________
+Asumiendo que Fecha efectivamente es la estructura que declaramos más arriba, y fecha es su función de inicialización. que previamente implementamos. veamos cómo implementar la función fechaTostring para crear y devolver una cadena que sea la representación de la fecha contenida en el parámetro f.
+
+
+
+
+string fechaToString(Fecha f)
+{
+// retornamos dia/mes/anio string s= to string(f.dia)+"/"
++to=string(f.mes)+"/"
++to_string(f.anio);
+return s;
+
+
+
+
+
+
+La función to_string es una función de la biblioteca de C++ que podemos utilizar agregando la línea #include<string> en el encabezado del programa.  
+Por último. la implementación de fechaAddDias no es tan simple, pues hay que tener en cuenta que al sumarle n días a una fecha podría variar el mes (dependiendo de cuántos días tiene el mes); y al variar el mes, cambiar el año.
+
+
+
+
+Fecha fechaAddDias(Fecha f,int n)
+{
+Fecha ret;
+//
+// que hacemos aquí... ????
+//
+return ret;
+
+
+
+
+
+
+1..3.2.1..  Usuario del TAD
+Un TAO es una herramienta que creamos y/o utilizamos para facilitar el desarrollo de nuestros programas. incrementando su legibilidad y mantenibilidad. Por esta razón. quien utiliza un TAO es un programador; no el usuario final del programa.
+<  
+________________
+1..3.2.2.  Inicialización de un TAD
+Para evitar que el usuario tenga que manipular la implementación de la estructura. debemos proveer una función de inicialización cuyo nombre debe coincidir con el nombre de la estructura. aunque comenzando en minúscula.
+
+
+1..3.2.3.  Sobrecarga de funciones
+Podemos escribir varias versiones de una misma función siempre y cuando todas tengan diferentes prototipos. Por ejemplo: la función de inicialización fecha permite crear fechas a partir de los atributos día. mes y año.
+Probablemente podría interesarnos permitir que el usuario pueda crear fechas a partir de una cadena de caracteres. como por ejemplo: "02/10/1970".
+Para esto tenemos que sobrecargar la función de inicialización fecha.
+
+
+
+
+Fecha fecha(int d,int m,int a){//... } Fecha fecha(string s){ //... }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura 1.20. Stack de programación. La aplicación usaTAD y funciones del lenguaje. Los TAD se
+programan usando las funciones del lenguaje de programación
+________________
+Ahora tenemos dos funciones llamadas fecha. La primera recibe tres enteros: la segunda. una cadena de caracteres. Cuando invoquemos a fecha. dependiendo de qué argumentos le pasemos. el compilador sabrá a qué versión de la función estamos invocando e invocará la versión correcta.
+
+
+// creamos una fecha a partir de tres enteros
+Fecha fl = fecha(2,10,1970);
+
+
+// creamos una fecha a partir de una cadena
+Fecha f2 = fecha("25/ll/1996");
+
+
+Cabe aclarar que podemos sobrecargar cualquier función, independientemente de que sea o no parte de un TAD. La sobrecarga de funciones no es una propiedad exclusiva de los TAD.
+
+
+   3. Autoevaluación y ejercicios
+________________
+
+
+
+
+
+
+   4. ¿Qué sigue?  
+________________
+Ejercicios
+  
+En el próximo capítulo trabajaremos fuertemente con cadenas de caracteres. Desarrollaremos varias funciones para manipular caracteres integrando así nuestra propia biblioteca de funciones; la cual utilizaremos para gestionar colecciones de datos. Es decir: dentro de una cadena guardaremos datos, separados uno del otro por un carácter separador. Luego, extenderemos este concepto para convertir los datos en objetos y, de este modo. crearemos una herramienta que nos permitirá administrar colecciones de objetos. La llamaremos TAD col l.  
+
+
+
+
+<        >  
+
+
+Autoeva/uación
+  
+
+
+
+
+
+CAPÍTULO 2
+CADENAS DE CARACTERES Y ESTRUCTURA DE DATOS
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lección 4  
+
+
+
+
+  
+
+12.1.        Lección 4
+Durante esta lección aprenderemos a manipular cadenas de caracteres. Desarrollaremos funciones que nos permitirán realizar operaciones básicas. tales como: averiguar la longitud de una cadena. obtener una subcadena. convertir de mayúsculas a minúsculas. averiguar en qué posición aparece un determinado carácter. etcétera. Todas estas funciones integrarán nuestra propia biblioteca y formarán la base sobre la cual. más adelante. construiremos otras bibliotecas de funciones más avanzadas.  
+
+
+      1. Carácter
+Llamamos así a cualquiera de los símbolos que componen un alfabeto. Por ejemplo: la letra 'A. el número ·5· o el signo·+·_
+Cada carácter se identifica con un valor entero positivo. Esta relación carácter/valor es fija y se establece en una tabla conocida como Tabla ASCII. que veremos a continuación.
+________________
+
+
+Por ejemplo. al carácter 'A' le corresponde el valor 65. al carácter ·g· el valor 66. y así sucesivamente. Además. la tabla ASCII asigna el valor 48 al carácter 'O'; 49 al carácter T: 50 al carácter '2'. etcétera.
+
+
+
+
+
+
+32
+	33
+	34
+	35
+	36
+	37
+	38
+	39
+	40
+	41
+	42
+	43
+	44
+	45
+	46
+	47
+	
+
+	!
+	"
+	ti
+	$
+	%
+	&
+	
+
+	(
+	)
+	•
+	+
+	
+
+	-
+	
+
+	/
+	48
+	49
+	50
+	51
+	52
+	53
+	54
+	55
+	56
+	57
+	S8
+	59
+	60
+	61
+	62
+	63
+	o
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+	:
+	;
+	<
+	:
+	>
+	?
+	64
+	65
+	66
+	67
+	68
+	69
+	70
+	71
+	72
+	73
+	74
+	75
+	76
+	77
+	78
+	79
+	@
+	A
+	B
+	e
+	D
+	E
+	F
+	G
+	H
+	1
+	J
+	K
+	L
+	M
+	N
+	o
+	80
+	81
+	82
+	83
+	84
+	85
+	86
+	87
+	88
+	89
+	90
+	91
+	92
+	93
+	94
+	95
+	p
+	Q
+	R
+	s
+	T
+	u
+	V
+	w
+	X
+	y
+	z
+	[
+	\
+	l
+	
+
+	-
+	96
+	97
+	98
+	99
+	100
+	101
+	102
+	103
+	104
+	105
+	106
+	107
+	108
+	109
+	110
+	111
+	
+
+	a
+	b
+	e
+	d
+	e
+	f
+	g
+	h
+	i
+	j
+	k
+	1
+	m
+	n
+	o
+	112
+	113
+	114
+	115
+	116
+	117
+	118
+	119
+	120
+	121
+	122
+	123
+	124
+	125
+	126
+	127
+	p
+	q
+	r
+	s
+	t
+	u
+	V
+	w
+	X
+	y
+	z
+	{
+	
+
+1
+	}
+	
+
+N
+	
+
+	>
+
+
+
+
+
+
+Tabla 2.1.Tabla ASCII
+
+
+En C++ los caracteres se representan con el tipo de dato char. preparado especialmente para contener un valor entero de 1 byte de longitud: un código
+
+
+ASCII.
+________________
+
+
+
+
+Por lo anterior, las siguientes líneas de código son equivalentes:
+ehar el='A'; 1 ehar e2=65;
+También es válido hacer:
+________________
+A priori una cadena no podría incluir el carácter" (comilla doble). porque el mismo se utiliza para indicar dónde comienza y finaliza dicha cadena de caracteres.
+
+
+string s = "El earaeter "es un problema"; / ERROR
+int i='A';
+Si mostramos por consola los valores de las variables el,e2 e i tendremos la siguiente salida:
+
+
+char cl='A'; char e2=65; int        i='A';
+
+
+cout << el << endl. ;        // Salida: A cout << c2 << endl.;         // Sa uda: A cout << i << endl;         // Salida: 65 cout << (char)i << endl.; // Salida: A    
+
+
+
+
+      2. Cadena de caracteres
+________________
+El carácter " (comilla doble) se considera especial, pero esto no es un impedimento para que una cadena pueda contener caracteres especiales. Simplemente habrá que anteponerles el carácter de escape \ (carácter contrabarra).
+
+
+string s = "El caracter \" ya no es un problema";  
+SALIDA: El  caracter " ya 1.0 es un pLoblema
+cout << s << encil;
+Al anteponer\ al carácter" (comilla doble), el compilador interpretará que"        >
+es parte de la cadena, no su delimitador.
+Otros caracteres especiales son:
+Una cadena de caracteres es una sucesión finita y ordenada de caracteres. "Hola", "Pablo" y "Esto es una cadena" son cadenas de caracteres. Si cambiamos el orden de los caracteres de cualquiera de estas cadenas, ya no serán las mismas, serán otras.
+________________
+Carácter especial
+
+
+  
+
+\n
+
+
+  
+
+\r
+
+
+  
+
+\t
+________________
+Descripción Salto de línea Retorno de carro
+Tabulador  
+Aunque C++ no provee un tipo de dato primitivo que permita contener cadenas de caracteres, existe la clase string,que cubre ese vacío.
+
+
+      1. Caracteres especiales y carácter de escape
+________________
+
+
+  
+
+\"        Comilla doble
+
+
+  
+
+\\        Contrabarra
+
+
+  
+
+\O        Carácter nulo
+
+
+Tabla 2.2. Caracteres especia/es
+Otro ejemplo de uso de un carácter especial podría ser:
+________________
+
+
+string sl="Hola, esta es \Omi cadena";
+cout << sl << endl;        SALIDA: Hola, esta es  
+
+
+string s = "El caracter\nes un salto de linea"; cout << s << endl;
+
+
+
+
+La salida será:
+
+
+
+
+El caracter
+es un salto de linea
+
+
+
+
+      2. Carácter nulo que indica el final de una cadena
+________________
+
+
+      3. Acceso directo a los caracteres de una cadena
+Podemos acceder a cada uno de los caracteres de una cadena s haciendo referencia a s [ i J. donde i es un valor comprendido entre O y la posición del carácter nulo.
+Por ejemplo:
+
+
+
+
+string s = "Hola";
+
+
+Cuando asignamos string s="Hola".internamente se genera una estructura como la siguiente:  
+  
+
+H        o        a        \0
+________________
+cout << s(O] << endl; cout << s(1 J << endl; cout << s(2) << endl;
+cout << s(31 << endl;
+cout << s 141 << endl;
+________________
+Salida: H Salida: o Salida: 1 Salida: a
+Salida: [sin salida, caracter nulo1      
+  
+
+o        1        2        3        4
+Figura 2.1. Estructura de una cadena de caracteres
+
+
+Los caracteres de la cadena se alojan en celdas de memoria consecutivas que se numeran desde cero. Al final. se agrega una celda adicional que contiene el
+carácter especial ·,o· (barra cero). también llamado carácter nulo. que permite
+identificar dónde finaliza el contenido de la cadena de caracteres.
+Es muy importante tener presente que todas las cadenas finalizan con '\O". pues este concepto será fundamental para desarrollar las funciones de tratamiento de cadenas de caracteres que plantearemos más adelante. De hecho. como podemos ver en el siguiente ejemplo, cout reconoce al '\O' como fin de la cadena.
+________________
+NOTA: Dependiendo de qué versión del compilador estemos usando, el código anterior podría no compilar e indicar el siguiente error de compilación:
+Invalid overload of 'endl'
+
+
+Si fuera el caso. lo solucionaremos casteando s [ i]  a char.
+
+
+
+
+string s = "Hola";
+
+
+cout << (char)s[OJ << end.1; //  Salida: H
+//:
+
+
+
+
+      4. Longitud de una cadena
+________________
+2.1.2.6.  Ciclo iterativo for
+El ciclo for es una alternativa al ciclo while, y consiste en una estructura de repetición que permite controlar exactamente cuántas iteraciones queremos realizar. Por ejemplo. el programa del apartado anterior puede resolverse con un ciclo for. tal como aparece en el código de la izquierda. A la derecha. observamos el mismo programa, pero usando un ciclo while.
+La longitud indica cuántos caracteres válidos contiene una cadena de caracteres. Por ejemplo. la cadena "Hola" tiene una longitud igual a 4; a su vez. este valor coincide con la posición que ocupa el carácter nulo.
+
+
+      5. Operadores aritméticos unarios
+Este tipo de operadores son alternativos a los operadores aritméticos tradicionales y simplifican notablemente su uso. En la siguiente tabla. podemos ver a los operadores unarios más frecuentes. y también compararlos con los operadores  
+________________
+
+
+string s = "Hola"; for(ínt i=O; i<4; i++)
+{
+cout << s[i] << end.1;
+________________
+
+
+string s = "Hola"; ínt i=O;
+whíle( i<4  
+{
+cout << s[i] << endl; i++;
+
+
+>
+aritméticos tradicionales equivalentes.
+Sean las variables i.a y b de tipo int y con algún valor válido. entonces:
+
+
+Tradicional
+	Unario
+	Descripción
+	i=i+l
+	i++
+	Incrementa el valor de i en una unidad.
+	i=i-1
+	i--
+	Decrementa el valor de i en una unidad.
+	a=a+b
+	a+=b
+	Acumula el valor de b en a.
+	a=a-b
+	a-=b
+	Le resta a a el valor de b.
+	a=a*b
+	a*=b
+	Asigna a a su valor multiplicado por b.
+	
+
+Tabla 2.3. Operadores aritméticos unarios
+________________
+El encabezado del ciclo for tiene tres secciones. que se separan entre sí mediante un ; (punto y coma).
+En la primera sección, se declara una variable y su valor inicial. En este eJemplo, declaramos la variable i cuyo valor inicial es O (cero). En la tercera sección. se establece un patrón de modificación de la variable. En nuestro caso. i ++ indica que la variable i se incrementará automáticamente una unidad por cada iteración del ciclo. Finalmente. en la sección del medio se establece una condición lógica; el cic-lo for iterará mientras se compruebe que dicha condición sea verdadera. En nuestro ejemplo. el ciclo iterará mientras el valor de i sea menor que 4.
+Sabiendo que las cadenas finalizan con'\O', podemos usar un ciclo for para iterar a través de los caracteres de la cadena s mientras s[i] no sea el carácter nulo, es decir, mientras no lleguemos al final de la cadena.
+
+
+string s = "Hola";
+for{int i=O; s[i) !='\0'; i++)
+{
+cout << s[i) << encll;
+________________
+string sl string s2 string s3
+if( s2<sl
+{
+________________
+"Pablo"; "Alberto"; "Pablo";
+// Saiida: Alberto es alfabeticamence...  
+
+
+Esta solución es mejor que la anterior. ya que no depende de la longitud s. En otras palabras: el for itera y muestra todos los caracteres de la cadena. independientemente de cuál sea su longitud.
+      7. Concatenar cadenas de caracteres
+Para concatenar cadenas. usamos el operador+. Veamos el siguiente ejemplo:
+________________
+cout<< s2 <<" es alfabeticamente menor que: "<< sl  <<encll;
+
+
+if( sl==s3 ) //  Salida: Pablo es igual a Pablo
+{
+
+
+
+
+
+
+
+
+cout<< sl <<" es igual a: "<< s3 <<encll;
+
+
+string sl string s2 string s3  
+________________
+"Hola";
+que tal?";
+s1+ s2;
+________________
+
+
+
+
+      9. Función de comparación
+Cuando hablamos de función de comparación nos referimos a una función cuyo  
+cout << s3 << encll; 1/  Salida: Hola, que tal?
+
+
+      8. Operadores relacionales aplicados a cadenas
+Los operadores relacionales<.<=. >.=>y== permiten comparar alfabéticamente cadenas de caracteres. Por ejemplo:
+________________
+objetivo es comparar dos elementos. que podrían o no ser del mismo tipo, a fin de establecer un criterio de precedencia. Dicho de otro modo. dados dos elementos a y b, la función de comparación debe determinar si a precede a b, b precede a a. o
+ambos valores son iguales.
+Al existir tres posibilidades. una función de comparación que compare dos elementos a y b debe retornar (devolver) un valor entero negativo. positivo o nulo (cero). según la siguiente tabla.
+
+
+
+
+  
+  
+
+Si considera que
+	Retorna
+	a precede a b
+	Negativo
+	b precede a a
+	Positivo
+	a es igual a b
+	O (cero)
+	ret=O; // si a es igual a b retorno cero
+
+
+
+
+return  ret;
+
+
+Tabla 2.4.Valor de retorno de una función de comparación
+
+
+Por ejemplo. la siguiente función de comparación compara dos valores enteros a y b determinando que a precede a b si a es menor que b.
+
+
+int cmpint(int a,int b)
+{  
+________________
+
+
+Esta misma función podemos resolverla más fácilmente así:
+
+
+
+
+int cmpint(int a,int b)
+{
+return a-b;
+int ret; if( a<b) (  
+ret=-1;
+else
+________________
+
+
+// si a precede a b reton,o negativo
+________________
+
+
+
+
+Puede sorprendernos que la implementación de la función sea tan corta, pero cumple absolutamente con todos los requisitos planteados: si a<b, la diferencia a-b será negativa y la función retornará (devolverá) un valor menor que cero. Si a>b la diferencia a-b será positiva, y si ambos valores son iguales la  
+if( a>b) //  si a no precede a b retorno positivo
+{
+
+
+
+
+
+
+else
+________________
+diferencia será nula.
+cmpint establece que a precede a b si a es numéricamente menor que b. Si quisiéramos cambiar el criterio de precedencia para indicar que a precede a b si a es numéricamente mayor que b escribiremos la siguiente función:
+
+
+int cmpint2(int a,int b)
+{
+return b-a;
+
+
+
+
+
+
+
+
+Veamos una función de comparación que compara dos cadenas, determinando que s1 precede a s2 si s1 es alfabéticamente menor que s2.
+
+
+int        cmpString(string sl,string s2)
+{
+int        ret;
+
+
+
+
+
+
+if( sl<s2 ) // si sl<s2 retorno negativo  
+(
+ret=-1;
+
+
+else
+
+
+if( sl>s2 )// si sl>s2 retorno positivo    
+{  
+ret•l;
+
+
+else
+________________
+
+
+struct Persona
+{
+int dni; string nom;
+} ;
+
+
+int cmpPersonaDNI(Persona p,int dni) return p.dni-dni;
+
+
+
+
+      10. lf-inline
+Esta sentencia es una abreviatura del if. En ocasiones resulta muy cómoda y, dependiendo del caso. nos permitirá ahorrar muchas líneas de código.  
+En el código de la izquierda, podemos ver la función de comparación de cadenas de caracteres cmpstring que desarrollamos antes. A la derecha, vemos la misma función implementada con un if-inline.
+ret=O;;/ si sl--s2 retorno cero  
+
+
+
+
+
+
+return  ret;
+
+
+
+
+
+
+Ahora veremos una función de comparación que compara elementos de diferentes tipos, como puede ser: una persona (Persona) y un número de DNI (int)
+
+
+
+
+
+
+
+
+
+
+int cmpString(
+string s1
+,string s2)
+
+
+int ret;
+if( sl<s2
+{
+ret=-1;
+
+
+else
+{
+if { sl>s2
+{
+________________
+
+
+int cmpString(string sl,string s2)
+{    
+/ I NlRTO, pero... ¿¿QC.:E HACE??
+return sl<s2?-1:sl>s2?1:0;
+________________
+signo ? y colocamos la segunda parte de la sentencia: qué valor queremos retornar en caso de que la expresión lógica resulte verdadera. Finalmente. la tercera parte del if-inline se ubica después de y consiste en el valor que la sentencia debe retornar en caso de que la expresión lógica resulte falsa.
+La función cmpstring que desarrollamos en la tabla anterior utiliza dos sentencias if-inline anidadas.
+
+
+int cmpString(string sl,string s2)
+{
+return sl<s2?-1:sl>s2?1:0;
+ret=l;
+
+
+else
+<        ret=O;
+
+
+return ret;
+________________
+
+
+Si se comprueba que sl<s2 retornamos (devolvemos) -1. Si la expresión anterior no es verdadera entramos en el segundo if-inline. evaluando si sl>s2.En este caso retornamos 1. si no. retornamos O. Según cual sea el caso. la función retornará un valor negativo. cero o positivo.
+
+
+      3. Biblioteca de funciones y API  
+Una biblioteca de funciones consiste en un conjunto de funciones. desarrolladas por nosotros mismos o por terceros. con la finalidad de resolver cuestiones vinculadas a una problemática común. Las bibliotecas no sólo incluyen funciones.
+Aunque pueda parecernos algo confuso. el if-inline tiene su lógica. Y es muy también puedenincluir TAOy clases.
+simple. La estructura del if-inline es la siguiente:
+condición? retorno por true:retomo por false
+La sentencia se compone de tres partes. separadas entre sí por ? (signo de interrogación) y: (dos puntos).
+La primera parte. ubicada entre el inicio de la sentencia y el signo ?. es la expresión lógica cuyo valor de verdad debe ser evaluado. A continuación. entre el
+________________
+Por ejemplo. una biblioteca de comunicaciones consistiría en un conjunto de funciones que podríamos invocar para hacer que nuestro programa se conecte con otros procesos a través de la red. una biblioteca de gráficos de vídeo nos ayudaría a escribir programas que dibuJen gráficos en la pantalla. y una de tratamiento de cadenas de caracteres agruparía funciones para manipular los caracteres de una cadena.
+
+
+
+
+
+
+
+
+
+
+Aunque el concepto es un poco más extenso. solemos llamar API a la                A continuación. como actividad práctica. desarrollaremos nuestra propia documentación de las funciones de una biblioteca. Esta documentación debe biblioteca para el tratamiento de cadenas de caracteres. cuyas funciones tendrán describir:        nombres y prototipos casi idénticos a los de Java. Pues como autor considero que, después de aprender a diseñar algoritmos y programarlos, Java debe ser el
+Nombre de la función.
+Tipo de dato del valor de retorno. Parámetros que recibe.
+Tipo de dato de los parámetros. Qué hace.
+Qué retorna. Ejemplo de USO.
+         6. Tratamiento de cadenas de caracteres
+Llamamos tratamiento de cadenas de caracteres o. simplemente. tratamiento de cadenas al conjunto de acciones que realizamos sobre una cadena con el objetivo de manipular sus caracteres.  
+Por ejemplo: dada una cadena, averiguar su longitud. si contiene o no un determinado carácter. si está en mayúsculas o minúsculas. convertirla a mayúsculas o minúsculas. remover los espacios en blanco que pueda tener a la izquierda, derecha o en ambos extremos, extraer una subcadena, etcétera.
+Una biblioteca de funciones para el tratamiento de cadenas de caracteres agrupará todas estas funciones. y su API las documentará.
+Invito al lector a googtear las palabras: API String Java. Con esto podrá acceder fácilmente a la documentación de todas las funciones de tratamiento de cadenas que provee dicho lenguaje de programación.
+________________
+siguiente paso.
+
+
+         7. Actividad práctica: API de tratamiento de cadenas de caracteres
+[01
+Para este desarrollo, trabajaremos sobre un proyecto Eclipse. previamente configurado con los prototipos de cada una de las funciones de la API.
+A través de los siguientes códigos QR podremos descargar la API (documentación). el proyecto sobre el cual vamos a trabajar. y ver un vídeo que explica cómo importar el proyecto en Eclipse y comenzar a desarrollar nuestro trabajo.  
+  
+
+API de tratamiento de cadenas de caracteres
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Descargar proyecto Eclipse    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<
+Importar el proyecto y modalidad de trabajo
+
+
+Esta modalidad de trabajo la repetiremos a lo largo de muchos de los capítulos de este curso de algoritmos y programación.
+A modo de avance. analizaremos cómo encarar y resolver las primeras dos funciones de la API. Estas funciones son: length ycharcount.
+La función length (longitud) debe retornar la longitud de una cadena que recibe como parámetro. Su prototipo es:
+int        length(string  s);
+Un ejemplo de uso de esta función podría ser el siguiente:
+________________
+string s = "Hola"; int  x = length(s);
+cout << "La longitud de: " << s << " es: " << x << endl;
+
+
+
+
+La lógica para programar length consiste en incrementar un contador ( i) , cuyo valor inicial será O, el cual utilizaremos para acceder a cada uno de los caracteres des: nos detendremos cuando s [il sea el carácter nulo '\O'. En este momento el valor de i coincidirá con la longitud de la cadena.
+
+
+int        length(string  s)
+{
+int  i=O;
+while( s[i) !='\0'
+i++;        >  
+return i;
+
+
+
+
+
+
+La función charcount. que recibe una cadena s y un carácter c. debe contar cuántas veces aparece e dentro de s. Su prototipo es:
+int        charcount(string s,int e); Un ejemplo de uso sería el siguiente:
+
+
+
+
+
+
+
+
+
+
+char e=        'a';
+string s = "La casa es linda"; int x = charCount(s,c);
+
+
+cout <<"En:"<< s <<" el carácter:"<< c <<" "; cout <<"aparece:"<< x <<"veces"<< endl;
+________________
+Por ejemplo. en la siguiente línea. ejecutamos un programa y le pasamos 4 argumentos.
+
+
+La lógica para resolver esta función consiste en recorrer la cadena s  
+preguntando por cada carácter si es igual a c. En tal caso incrementaremos un contador (cont). cuyo valor final coincidirá con la cantidad de veces que e
+aparece dentro de s.        Argumentos en línea de comandos
+C:\>MuestraArgumentos Pablo Pedro Juan Raul
+int charCount(string s,char e)
+1  
+int cont = O;
+for(int i=O; s[i]!='\0'; i++)
+{
+if( s(i]==c
+{
+cont++;
+________________
+Acceder a estos valores requiere usar recursos que todavía no hemos explicado. Aun así. esto no será un impedimento para comprender cómo hacerlo.
+
+
+dos narametros al          
+int main(int argc,char** argv)
+{  
+rec1be el programa
+for(int i=l;i<argc;i++)
+{
+
+
+return cent;
+________________
+aunque cada arg mento esra en argv{i], son string
+string s = argv(i];
+
+
+
+
+
+
+         4. Argumentos en línea de comandos
+Cuando ejecutamos un programa también podemos pasarle argumentos. Se trata simplemente de cadenas de caracteres que el programa puede leer y utilizar.
+________________
+
+
+/ usamos e         esimo argumento
+cout << s << endl; return O;  
+
+
+
+
+
+
+
+
+Comenzamos agregando dos parámetros al prototipo de la función main. que por convención llamaremos: argc (argument count) y argv (argument vector).
+El primero indica cuántos argumentos recibimos: el segundo contiene los argumentos. Recordemos que cada argumento es una cadena de caracteres. En nuestro ejemplo. cuando ejecutamos el programa le pasamos 4 argumentos: sin embargo, el programa recibirá 5 cadenas. numeradas de O a 4.
+La primera cadena. a la que podemos acceder a través de argv [ o J.
+contendrá el nombre del programa: "MuestraArgumentos". Después. argv [ 1J  
+será "Pablo", argv[2J "Pedro", argv[3J "Juan· y argv[4J "Raul".        ¡2.2.
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lección 5
+________________
+
+
+  
+
+
+
+Ejercicios
+
+
+         5. Autoevaluación y ejercicios
+
+
+<    
+
+
+
+
+
+
+  
+
+Autoevaluación
+________________
+En esta lección. utilizaremos las funciones que construimos durante la lección anterior para crear una nueva biblioteca de funciones de tratamiento de tokens. Esto es: manipular subcadenas. dentro de una cadena principal. separadas entre sí por un carácter separador. A la cadena principal la llamaremos cadena tokenizada.
+A su vez. estas funciones serán la base sobre la cual. más adelante. construiremos una herramienta que nos permitirá administrar colecciones de objetos.  
+
+
+2.2.1.        Tratamiento de tokens
+Sea s una cadena y e un carácter. llamaremos token a toda subcadena de s encerrada entre dos caracteres c. O bien. entre el inicio de s y la primera ocurrencia de e o la última ocurrencia de e y el final de la cadena s.
+
+
+cuántos tokens tiene una cadena. agregar. insertar y remover tokens y establecer si, dentro de la cadena. existe o no un token especificado.    
+
+
+
+
+
+
+
+
+Lección 5
+
+
+Por ejemplo, si e es el carácter •¡ • (léase carácter pipe). y 5 la cadena "JohnI Paul IGeorge IRingo". los tokens que podremos extraer de la cadenas serán: "John". "Paul". "George" y "Ringo". en ese orden. Pero si el carácter c fuese 'o'. considerando la misma cadena 5, los tokens por extraer serán: ''J". "hnIPaulIGe". "rge IRing" y""; este último token consiste en la cadena vacía.  
+Diremos que 5 es la cadena tokenizada y c el carácter separador. Existen dos casos particulares:
+La cadena vacía no genera tokens, sea cual sea el carácter separador. Si 5 no contiene a c. toda la cadena. en sí misma. será un (único) token.
+         2. Actividad práctica: API de tratamiento de tokens
+[0]
+Del mismo modo que lo hicimos con la biblioteca de cadenas de caracteres. aquí desarrollaremos una biblioteca cuyas funciones nos permitirán manipular los tokens que existen dentro de una cadena tokenizada. Por ejemplo: determinar
+________________
+
+
+
+
+
+
+
+
+
+
+API de tratamiento de tokens
+
+
+Para programar las funciones de esta API utilizaremos la biblioteca de funciones de tratamiento de cadenas de caracteres que desarrollamos más arriba.
+A modo de avance. analizaremos cómo desarrollar las dos primeras funciones: tokencount y addToken.  
+La función tokencount. que recibe una cadena tokenizada 5 y un carácter separador c. debe contar y retornar cuántos tokens genera e dentro de 5.
+int  tokencount(5tring  5,char  e);
+Un ejemplo de uso podría ser el siguiente:
+
+
+
+
+ ;¡so    
+string s = "JohnlPaullGeorgelRingo";
+int n = tokenCount(s,' 1 ');
+cout << n << endl;        Re>torna  4
+________________
+El código de la función será el siguiente.
+
+
+
+
+inttokenCount(string s,char e)
+{
+
+
+//  caso 2
+s        = "Paul";
+int n -  tokenCount(s,' 1 ');
+cout << n << endl; 1/ Retorna 1
+
+
+//  case, 3
+string s = ""·  
+int n = tokenCount(s,' 1 ');
+________________
+return isEmpty(s)?O:charCount(s,c)+l;
+
+
+
+
+
+
+Como podemos apreciar. resolvimos la función tokencount en una única línea de código gracias a que. previamente. desarrollamos isEmpty y charcount.  
+cout << n << endl;
+________________
+Retorna  O
+________________
+Esta es la esencia de la programación: construir capas de software apoyándonos en capas que construimos previamente. las cuales se apoyan sobre
+otras construcciones anteriores y así sucesivamente.
+La lógica para resolver esta función requiere contar cuántas veces aparece el carácter separador e dentro de la cadena tokenizada s. y sumarle 1. Para eso podremos utilizar la función charcount de la biblioteca de cadenas de caracteres.  
+En la cadena s del ejemplo anterior. el carácter separador ' 1 ' aparece 3 veces. generando 4 tokens: "John". "Paul". "George" y "Ringo".
+Esta misma lógica también se aplica en el caso en que la cadena s no contenga ningún carácter separador. En tal situación charcount retornará O. y al sumarle 1 estaremos retornando 1. acorde a lo esperado; pues. si la cadena no contiene al carácter separador. toda la cadena será un (único) token en sí misma.
+Sin embargo, si se tratase de la cadena vacía la función tokencount debería retornar O. ya que la cadena vacía no contiene tokens. Esta situación la contemplaremos especialmente con un if.
+________________
+Analicemos ahora la función addToken. que recibe una cadena tokenizada
+s. un carácter separador c. y una cadena t (token) que debemos agregar al final de  
+S.
+Su prototipo es: void addToken (string& s, char e, string t): Un ejemplo de uso podría ser:
+
+
+string s = "JohnlPaullGeorgelRingo"; charc        'I';    
+string t = "George Martin"; addToken(s,c,t);
+Salida: JohnlPaullGeorgelRingolGeorge Martín  
+cout << s << encil;
+$  = 011;  
+addToken(s,c,t);
+//  Sa.ida:  orge Mar ín
+cout << s << endl;
+
+
+La lógica para implementar addToken es tan simple como concatenar. al final de s. un carácter e seguido del token t. Pero debemos contemplar el caso
+<        particular de que s sea la cadena vacía. En tal situación. t pasará a ser s.        Autoevaluación        >  
+void addToken(string& s,char c,string t) s = isEmpty(s)?t:s+c+t;
+
+
+         3. Autoevaluación y ejercicios
+
+
+Ejercicios
+  
+
+12.3.        Lección 6
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<        Autoevaluación
+________________
+A medida que adquirimos experiencia en programación tendemos a maximizar el nivel de abstracción del código que programamos. pues nos damos cuenta de que no tiene sentido repetir varias veces el mismo proceso
+Cuando una función recibe parámetros de un determinado tipo de dato. esta sólo podrá ser usada si le pasamos argumentos del tipo en cuestión. Por ejemplo. la función sumar. cuyo prototipo vemos a continuación. únicamente tiene utilidad para sumar números enteros. retornando un valor del mismo tipo.
+int sumar(int a,int b);
+¿Qué sucedería su tuviésemos que sumar valores de tipo double, esperando obtener como resultado un valor de este tipo de dato? ¿Y si tuviésemos que sumar fracciones (variables de tipo Fraccion)?
+Si pudiésemos abstraernos y llamar T al tipo de dato de los elementos que vamos a sumar. el prototipo de la función podría plantearse del siguiente modo:  
+T sumar(T a,T b);
+Disponemos del operador + para sumar valores numéricos. ya sean de tipo int o double. Pero ¿cómo podríamos hacer que la función sumar sume fracciones?
+Aquí veremos recursos que nos permitirán lograr tal nivel de abstracción, que será imprescindible a lo largo de todo el curso de algoritmos y programación.
+  
+
+
+
+
+
+
+
+
+
+         3. Lección 6
+________________
+
+
+
+
+Ejercicios  
+________________
+
+
+         1. Funciones como argumentos de otras funciones
+Una función f puede recibir entre sus parámetros a otra función g. e invocarla sin conocer qué función es ni qué hace. Cada vez que invoquemos a f, podremos pasarle una u otra función como argumento en el lugar de la función g.  
+
+
+
+
+  
+
+Lección 6
+
+
+Por ejemplo, la función invocar,cuyo código vemos a continuación, recibe
+________________
+Enseguida veremos una función main que invoca la función invocar.pero para esto debe pasarle. entre su argumentos. un mensaje y una función que retorne un valor de tipo ctouble y reciba uno de tipo int.
+Las funciones fact y fib.que respectivamente calculan el factorial y el n­ ésimo término de la sucesión de Fibonacci. realizan tareas diferentes. Sin embargo, tienen prototipos idénticos, que además concuerdan con el requisito anterior. Retornan un valor de tipo double y esperan recibir uno de tipo int.  
+
+
+rartoria Je n  
+como parámetro a la función x. la invoca pasándole valores entre 1 y 5. y se abstrae de cuál es y qué hace dicha función.
+La función x podría ser cualquiera, siempre y cuando retorne un valor de tipo ctouble y reciba como parámetro otro valor de tipo int.
+<
+void invocar(string mssg,double x(int))
+{
+________________
+double fact{int n)
+{
+double f=l;    
+for(int i-2;i<•n;i++)
+{
+f=f*i;  
+
+
+
+
+return f;
+________________
+double fib(int n)
+{
+double ret; if( n>•2)  
+{    
+ret =fib(n-l)+fib(n-2);
+
+
+else
+{
+for(int i=l;i<S;i++)
+{
+________________
+ret        l;
+/  i1. vocc1mos a la  func.ion f 
+double d = x(i);
+cout<< mssg <<"de"<< i <<"        "<< d <<endl;
+________________
+
+
+return ret;
+
+
+Cualquiera de estas funciones podría pasar como argumento en la función
+invocar. Justamente. esto es lo que hacemos en la función main. Donde
+¿Qué hace la función invocar? Realmente no podemos saberlo. pues sólo invocamos a invocar pasándole fact. y luego fib. Acompañando cada invoca 5 veces a x; mostrando el valor que retorna x ( i). acompañado de un invocación con un mensaje acorde.
+mensaje que tampoco sabemos qué dice.
+
+
+
+
+int  main ()
+{
+________________
+         2. Tipo de dato genérico (temp/ate)
+Como ya sabemos. las funciones pueden recibir valores como parámetros. incluso.
+invccamos a i ocaz paJandole (como parametro) a tact         vimos que pueden recibir funciones entre sus parámetros. Pues bien. aquí invocar ("factorial",  fact) ;        agregaremos que una función puede parametrizar los tipos de dato de sus    
+cout << "  ---        : O) ---        "  << endl; / ¡  car l ta sonríente        parámetros. Por ejemplo: la función f  recibe un parámetro de tipo T (tipo  
+genérico). Luego, al invocar dicha función especificaremos concretamente cuál es  
+/ i vocamos a i vocar pasando1e (como parametro) a fib
+invocar("fibonacci", fib);
+________________
+ese tipo de dato.
+Veamos el siguiente ejemplo. cuya explicación daremos a continuación.
+
+
+
+
+return O;
+
+
+
+
+La salida de este programa será:
+
+
+factorial de1
+	1
+	factorial de2
+	2
+	factorial de3
+	6
+	factorial  de4
+	24
+	--- :O) ---
+	
+
+	fibonacci  de 1
+	1
+	fibonacci de 2
+	2
+	fibonacci  de 3
+	3
+	fibonacci  de 4
+	5
+	<
+________________
+fu,Kio        f  template<typename T> void f (T t)
+1
+/¡   ...  
+________________
+invor.amo a la funcion t
+int        main()  
+1
+f<int>(S) ;// T es i,, 
+f<string>("Hola");/         Tes string
+return O;        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Para comprender el alcance y la potencialidad que tiene este recurso debemos estudiar otro tema fundamental: tipos genéricos o templates. Combinando ambos recursos. lograremos un altísimo nivel de abstracción, que nos permitirá construir bibliotecas genéricas y maximizar el nivel de reutilización de código.
+________________
+En la función main del recuadro de la derecha invocamos dos veces a f especificando entre < (menor) y > (mayor) cuál es el tipo de dato concreto que debe tener el parámetro T.
+En la primera invocación. indicamos que T es int y le pasamos como argumento un valor entero (5). coincidiendo con el tipo concreto de T. En la segunda invocación, indicamos que T es string y le pasamos una cadena de caracteres.
+Llamamos template a una función que parametriza los tipos de sus parámetros.
+Otro ejemplo: la función comparaYMuestra. cuyo código veremos enseguida, compara y muestra (de menor a mayor) tres valores de tipo T. No
+
+
+
+
+
+
+
+
+conoce cuál es ese tipo de dato y, en consecuencia. no sabe cómo comparar valores de ese tipo.
+Sin embargo, gracias a que entre sus parámetros recibe la función de comparación cmpTT. que compara dos valores de tipo T.puede abstraerse del problema y realizar su tarea sin inconvenientes.
+
+
+template<typename T>
+void comparaYMuestra(T a,T b,T c,int cmpTT(T,T)l T menor,medio,mayor;  
+ i a e  el ,nayor de todos
+________________
+
+
+I comprJebo si b &s a mayor d& todos
+if( cmpTT(b,a)>O && cmpTT(b,c)>O)
+{
+mayor= b;
+
+
+cual esta en el medio y cual es el menor?  
+if( cmpTT(a,c)>O
+1
+medio        a;
+menor        e;
+else
+1
+if( cmpTT(a,b)>O && cmpTT(a,c)>O
+1  
+mayor - a;  
+// cual e ta =l  &1 medio y cual es el me or?  
+________________
+
+
+
+
+
+
+
+
+else
+(
+________________
+medio        e;
+menor        a;
+>  
+if( cmpTT(b,c)>O
+1
+medio        b;
+menor        e;
+
+
+else
+________________
+// pOL descarte, el mayor es e
+mayor= e;
+
+
+1/ cual  $Ca &n el medio y cual es el menor?
+if( cmpTT(a,b)>O)
+{
+
+
+
+
+
+
+
+
+else
+{
+________________
+medio        e;
+menor        b;
+________________
+medio        a;
+menor        b;
+
+
+else
+{
+medio        b;
+menor        a;
+
+
+
+
+
+
+
+
+Para invocar a comparaYMuestra debemos disponer de alguna función de comparación y pasársela como argumento en el lugar del parámetro cmpTT.
+Anteriormente. desarrollamos las funciones cmprnt y cmpstring. que permiten. respectivamente. comparar enteros y cadenas. Agregaremos una tercera
+________________
+
+
+int        main()
+{      
+int        i-30,j-10,k-49;
+
+
+1 /   
+________________
+
+
+
+
+
+
+
+
+mied_o 30,  me1 v1.  49
+función para comparar cadenas según su longitud. es decir: la cadena más corta precede a la cadena más larga_
+
+
+int        cmpString2(string a,string b)
+{
+return length(a)-length(b);
+
+
+
+
+
+
+En el siguiente programa. invocamos a comparaYMuestra para mostrar el menor. medio y mayor de tres valores de tipo int.y otros tres de tipo string.El criterio de precedencia que determinará cuál de estos es el menor. medio y mayor lo determina la función de comparación que le pasemos como argumento.  
+________________
+comparaYMuestra<int>(i,j,k,cmplnt);
+  
+
+
+
+
+
+comparaYMuestra<string>(s,t,z,cmpString);    
+
+
+/ Sa 'da: mayor berto, medi0 Pablo, menor Juan comparaYMuestra<string>(s,t,z,cmpString2);  
+return O;
+>
+¿Podremos usar comparaYMuestra para comparar estructuras y establecer algún criterio de precedencia? Por supuesto que sí.
+Veamos la estructura Persona y dos funciones que nos permitirán comparar personas: cmpPersonasDNI. que compara dos personas de acuerdo con su DNI y cmpPersonasNombre.que lo hace considerando sus nombres.
+
+
+struct Persona
+
+
+int        dni; string nombre;  
+} ;
+
+
+
+
+
+
+
+
+I compara pe soras por su ONT
+int cmpPersonasDNI(Persona pl,Persona p2)
+{
+return pl.dni-p2.dni;
+________________
+int main()
+{  
+Persona pl Persona p2 Persona p3  
+________________
+
+
+
+
+{10,"Pablo"1;
+{20,"Alberto");  
+{30,"Juan"J;  
+mue.,tra, d<: mayo. a mc-no1 por  
+________________
+DNI
+
+
+I compara unas personas por su nombre    
+int cmpPersonasNombre(Persona pl,Persona p2)
+{  
+return pl.nombre<p2.nombre?-1:pl.nombre>p2.nombre?l:0;
+
+
+
+
+Esta última función podríamos simplificarla invocando a cmpstring.
+<        I        compara unJ per3onas poL su nombre
+int cmpPersonasNombre(Persona pl,Persona p2)
+{  
+return cmpString(pl.nombre,p2.nombre);
+________________
+comparaYMuestra<Persona>(pl,p2,p3,cmpPersonasDNI);
+/  mu<:.,tra, de mayo1 a .n<:,ior po,  1 omb."            
+comparaYMuestra<Persona>(pl,p2,p3,cmpPersonasNombre);
+return O;
+
+
+
+
+Al compilar este programa. que conceptualmente está bien. obtendremos un error de compilación que hasta el momento no había ocurrido. El problema está
+relacionado con los cout del final de comparaYMuestra:        >  
+// :  
+cout<< "Menor: " << menor; cout<< "Medio: " << medio; cout<< "Mayor: " << mayor;    
+
+
+Ahora sí. en el programa principal invocamos a comparaYMuestra para comparar y mostrar personas según los criterios que establecen las funciones de comparación cmpPersonasDNIy cmpPersonasNombre.
+________________
+
+
+Como ahora T es Persona, cout no sabe o no conoce cuál es el criterio que debe utilizar para mostrar una persona en la consola. Este problema no apareció cuando T era int o string.
+Si queremos que comparaYMuestra también funcione con tipos de dato definidos por el programador. debemos modificar su prototipo para que reciba una función que. dado un valor de tipo T. retorne una cadena de caracteres que lo
+
+
+
+
+
+
+
+
+
+
+represente. Por convención. llamaremos a esta función tToString. ya que "convierte" un valor de tipo Ten un string.  
+
+
+template<typename  T>
+void comparaYMuestra(T a,T b,T c,int cmpTT(T,T)
+,string  tToString(T))
+//  ...
+
+
+De este modo. para mostrar el menor. medio y mayor valor entre a. b y e debemos invocar a tToString a fin de obtener la cadena que representa a cada uno de estos valores e imprimirlas en la pantalla.
+
+
+//  :  
+cout << "Menor: " << tToString(menor); cout << "Medio: " << tToString(medio); cout << "Mayor: " << tToString(mayor);
+________________
+
+
+
+
+Autoevaluación
+  
+
+
+
+Ejercicios  
+
+
+  
+
+
+
+         3. Autoevaluación y ejercicios  
+
+
+  
+
+________________
+            4. Lección 7
+Durante esta lección. desarrollaremos una herramienta que nos permitirá administrar colecciones de objetos. Por ejemplo: una colección de enteros. cadenas. estructuras. etcétera. Al tratarse de una colección de objetos (no importa de qué tipo) tendremos que hacer un uso intensivo de los recursos que estudiamos durante la lección anterior: tipos genéricos y punteros a funciones (recibir funciones como parámetros).
+La colección de objetos estará implementada sobre una cadena tokenizada.
+Para encapsular u ocultar esta cuestión. diseñaremos un TAO. que llamaremos:
+
+
+Coll.
+________________
+
+
+
+
+El TAD Coll proveerá funciones para agregar elementos a la colección,
+________________
+nuestra responsabilidad programar las funciones para implementar los métodos de acceso y demás funcionalidades.
+modificar o eliminar elementos ya existentes, buscar, ordenar, etcétera.
+
+
+            1. Colecciones
+En programación, una colección consiste en un conjunto de elementos, todos del mismo tipo, agrupados bajo un identificador común; es decir, una única variable que permite hacer referencia a todos los elementos del conjunto.  
+
+
+
+
+
+
+
+
+
+
+
+
+<
+________________
+El acceso a los elementos de una colección debe ser homogéneo. Por ejemplo: podemos utilizar un ciclo for para iterar sobre todos los caracteres de una cadena y abstraernos de cuál es el carácter al que estamos accediendo. Lo mismo sucede cuando accedemos a los tokens de una cadena tokenizada.
+Es decir. accedemos al i-ésimo carácter o al i-ésimo token y le aplicamos un proceso sin preocuparnos por cuál es ese elemento; y, por lo general, todos los elementos de la colección son sometidos al mismo tratamiento.
+Para comprender de qué estamos hablando. en el siguiente ejemplo. a la izquierda, todos los caracteres de la cadena s reciben el mismo proceso: se imprimen por consola. Análogamente. a la derecha. se calcula la longitud de cada uno de los tokens de la cadena tokenizada x. se acumula dicho valor y se muestra
+por consola la longitud media de los tokens.        >  
+Lección 7
+
+
+Las colecciones deben proveer funciones que brinden acceso a cada uno de sus elementos, como así también funciones para ordenarlos, iterarlos, modificarlos, agregar y quitar elementos, etcétera.
+Podríamos decir que string es una colección de caracteres, pues una única variable de este tipo agrupa e identifica a un conjunto de caracteres. y provee acceso a cada uno de sus elementos a través del operador [ J (operador corchete).
+Siguiendo el mismo razonamiento. una cadena tokenizada es una colección de cadenas. donde cada token es un elemento de la colección. En este caso, fue
+________________
+string s="Mi  cadena";
+________________
+string x="PablolJuanlPedro";
+
+
+cantidad de ~aracteres
+int n=length(s);
+
+
+""        fo 
+for(int i=O;i<n;i++)
+{  
+/ proceso e i-esimo
+caracr-ei-
+cout << s[i) <<endl;
+________________
+// cantidad de tokens
+int n-tokenCount(s, '1');    
+
+
+int sum=O;
+for(int i=O;i<n;i++)
+{  
+JI pro~eso el - simo t0ken string tk=getTokenAt(x,i,' 1 '); sum+=length(tk);
+________________
+/ col rcion de nombLeS (cader.as) string nombres="JuanlPedrolPablo"; for(int i O; i<tokenCount(nombres);i++) 1
+string nom = getTokenAt(s, '1',i);    
+
+
+
+
+
+
+cout << nom << endl;  
+
+
+cout << sum/n <<endl;        colecciun de 1umeLos (¿ ume10s?)  
+string numeros="ll4I8I9I15";
+for(int i=O;  i<tokenCount(numeros);i++) Los lenguajes de programación ofrecen una amplia variedad de        1
+posibilidades para utilizar colecciones. Los arrays, por ejemplo, son un tipo primitivo de colección que estudiaremos más adelante.  
+Sin embargo, y dado que nuestro principal objetivo es aprender a programar, utilizaremos todos los recursos que hemos estudiado para implementar nuestra
+________________
+string sNum = getTokenAt (s, 'I ', i);
+int num =  stringToint(sNum);//  convertimos  
+cout << num << endl;
+propia colección de objetos. En otras palabras: crearemos un tipo de dato que nos  Aunque cumple con su objetivo. trabajar con tokens resulta muy engorroso. Peor
+permitirá administrar conjuntos de objetos en memoria. Lo llamaremos: TAO Col l.
+
+
+            2. TAO Coll
+Hasta el momento. la única posibilidad que tenemos de mantener una colección de valores en memoria es mediante una cadena tokenizada. y acceder a cada uno de
+________________
+aún si necesitamos trabajar con una colección de valores numéricos. lo que requiere convertir entre cadena y número; o si la colección fuera de estructuras, como podría ser una colección de fechas, personas o cualquier otra.
+El TAO Coll, que analizaremos y desarrollaremos en este apartado, nos
+sus elementos a        través de las funciones  de tratamiento  de tokens  que  ayudará a proveer una capa de abstracción sobre las cadenas tokenizadas.
+desarrollamos previamente. tal como vemos en el siguiente ejemplo donde implementamos. sobre dos cadenas tokenizadas. una colección de nombres (cadenas) y otra de "números enteros".
+________________
+aportando la ilusión de disponer de una colección de objetos. cualquiera sea su tipo de dato.
+En otras palabras. desarrollaremos un TAOa través del cual podremos administrar colecciones de elementos. Su implementación será mediante tokens y cadenas
+
+
+tokenizadas. ya que por elmomentosóloconocemosestos recursos.
+
+
+            1. Ejemplo de uso
+Para entenderde qué estamos hablando,primeroanalizaremos un programa que utiliza doscolecciones:una de números enterosy otra de cadenas de caracteres, talcualelprograma anterior.Esto,suponiendo y aceptando que el TAD Coll ya está programadoy disponible para serutilizado.
+
+
+I        cole-,-.:.on  de !'Umeros  
+Coll<int> el= eoll<int>(); collAdd<int>(cl,l,intToString);
+
+
+
+
+<
+________________
+
+
+collAdd<int>(cl,4,intToString); collAdd<int>(cl,8,intToString); collAdd<int>(cl,9,intToString); collAdd<int>(cl,15,intToString);
+collReset<int>(cl);
+while( collHasNext<int>(cl)
+{
+int num        collNext<int>(cl,stringToint); cout << num << endl;
+
+
+colerc.l.or, de nc.,mbres (cadenas)  
+Coll<string> c2 - coll<string>(); collAdd<string>(c2,"Juan",stringToString); co11Add<string>{c2,"Pedro",stringToString); co11Add<string>(c2,"Pablo",stringToString);  
+col1Reset<string>(c2);
+while( collHasNext<string>(c2)
+{
+string nom = collNext<string>(c2,stringToString); cout << nom << endl;  
+
+
+
+
+Como vemos.en este programa no existen tokens nicadenas tokenizadas. En su lugar,están las colecciones el y e2, preparadas respectivamente para contenerelementosdetipo intystring.
+Casitodas las funciones delTAD coll que utilizamos en este ejemplo recibencomo parámetrounafunciónquellamaremos:función de conversión.
+
+
+
+
+
+
+
+
+En el caso de collAdd. para agregar valores enteros a el le pasamos la función intTostring. que dado un número entero retorna una cadena de caracteres que lo representa. Por otro lado. cuando iteramos sobre la colección el, le pasamos a collNext la función inversa:5tringToint, que dada una cadena con un valor numérico retorna ese mismo valor como int. Ambas funciones las hemos desarrollado como parte de la API de tratamiento de cadenas de caracteres.
+Análogamente. para agregar valores a c2 e iterar dicha colección de cadenas, le pasamos como argumento a collAdd y collNext la función 5tringToString que ya desarrollamos. cuya funcionalidad es trivial: retorna la misma cadena que recibe.
+
+
+string stringToString(string s)
+{
+<        return  s;
+
+
+El porqué de estas necesidades lo descubriremos cuando llegue el momento de programar las funciones del TAD Coll. Podemos deducir que. dado que la implementación del TAD se basa en tokens y cadenas tokenizadas, cada elemento que se agregue a la colección será un token dentro de una cadena.
+            2. Estructura del TAD Coll
+El TAD Coll utilizará la siguiente estructura, y su implementación quedará a cargo del estudiante.
+________________
+
+
+template<typename T>
+struct Coll
+{
+1/ imp1ementacion a cargo del estudiante
+) ;
+
+
+
+
+            3. Actividad práctica: API del TAD Coll
+
+
+
+
+
+
+
+
+
+
+Como ya mencionamos, la implementación de las funciones que integran la API del TAD será responsabilidad del estudiante. Sin embargo, tal como lo hicimos con las API de cadenas y tokens. aquí analizaremos y resolveremos dos de estas
+funciones, y parte de la estructura Col l.        >  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+API del TAD Col/
+
+
+Comenzaremos con la estructura coll, cuyo objetivo es ocultar (encapsular) la implementación de la colección de obJetos; que, como ya sabemos, utilizará una cadena tokenizada para guardar cada uno de los elementos de la colección.
+
+
+
+
+
+
+
+
+
+
+template<typename T>
+struct Coll
+{  
+
+
+string s;
+char sep;
+
+
+//:
+________________
+Dado que el objetivo de la función coll es crear una estructura Coll.dar valor inicial a sus campos y retornarla. su implementación es sencilla. casi trivial.
+
+
+template<typename T>
+Coll<T> coll()
+{
+) ;
+
+
+
+
+Las funciones que analizaremos son: coll (función de inicialización) y
+collAdd,que agrega un elemento al final de la colección de objetos.
+La función coll tiene por objetivo inicializar una colección. Esto es:
+________________
+
+
+Coll<T> e;
+c.s = "";
+            3. sep = '1';
+return e;
+prepararlos campos dela estructura Coll para que.a través delas funciones de        Observemos que en esta implementación de coll hardcodeamos el laAPI. elusuario puedaagregarelementosy manipularlos.Su prototipo es:        carácter separador. Pero la API incluye unaversión sobrecargada de coll que Coll<T> coll();         permite especificar qué valor debe tener dicho carácter.    
+El siguiente ejemplo ilustra el uso de las funciones coll Y collAdd. Esta                A través de la función collAdd podremos agregar un elemento al final de última la analizaremos posteriormente.        la colección. Su prototipo es:
+int collAdd(Coll<T>& c,T t,string tToString(T));
+Coll<int> e= coll<int>{); collAdd<int>(c,5,intToString); collAdd<int>(c,11,incToString); collAdd<int>(c,13,intToString);
+
+
+/1 :
+________________
+La función debe retornar la posición en la cual quedó colocado el elemento que acabamos de agregar.
+El ejemplo de uso de esta función es el mismo que utilizamos para coll.
+La implementación es muy sencilla. pues requiere sólo dos líneas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Autoeva/uación
+temp1ate<typename T>  
+int collAdd(Coll<T>& c,T t,string tToString(T))
+{
+addToken(c.s,c.sep,tToString(t));
+return tokenCount(c.s,c.sep)-1;
+
+
+
+
+Como podemos apreciar. la implementación de las funciones de Coll es muy simple gracias a que disponemos de una API de tratamiento de tokens. cuyas implementaciones también resultaron fáciles de resolver por disponer de la API de tratamiento de cadenas de caracteres.
+            3. Autoevaluación y ejercicios
+________________
+
+
+
+
+
+
+
+
+
+
+            5. Lección 8  
+________________
+
+
+
+
+Ejercicios
+Frecuentemente necesitaremos ordenar los elementos de una colección, o buscar dentro de esta la existencia de algún elemento que concuerde con ciertas características.        
+El TAD coll tiene en cuenta estos requerimientos y ofrece las funciones collSort y collFind. que. respectivamente. permiten ordenar la colección y buscar un elemento determinado. En este apartado, estudiaremos algunos algoritmos con los cuales podremos implementar las funciones mencionadas.
+               1. Ordenamiento  
+En todos los casos que aquí analizaremos trabajaremos sobre una colección de enteros Coll<int>. y el criterio de precedencia será de menor a mayor. Porque nuestro interés principal, aquí y ahora, es comprender la lógica de los algoritmos, no así su generalización.
+
+
+
+
+
+
+
+
+
+
+
+
+void insetionSort(Coll<int>& e)  
+1
+1/ -oleccion au iliar vac•a  
+Coll<int> aux = coll<int>();
+
+
+
+
+
+
+
+
+Lección B
+
+
+                  1. Ordenamiento por inserción simple
+Este algoritmo es extremadamente fácil de implementar. Requiere crear una colección auxiliar. inicialmente vacía. que llamaremos aux. y llamaremos c a la colección que vamos a ordenar.
+El algoritmo consiste en buscar el menor elemento de e, removerlo y agregarlo al final de aux. Repetiremos este proceso hasta que la colección e se quede vacía. Finalmente, la colección aux tendrá todos los elementos de e ordenados ascendentemente. El último paso será asignar aux a c.  
+________________
+while( collSize<int>(c)>O)
+{  
+busco e  menor en e
+int pos= O;
+int min = collGetAt<int>(c,O,stringToint);
+for(int i=O; i<collSize<int>(c);i++)
+{
+int elm = collGetAt<int>(c,i,stringToint);
+if( elm<min)
+1  
+min ª elm; pos        i;  
+
+
+
+
+collAdd<int>(aux,min,intToString); collRemoveAt<int>(c,pos);    
+
+
+e= aux;
+
+
+
+
+
+
+                  2. Ordenamiento por burbujeo
+Este es el algoritmo que habitualmente se utiliza para explicar cómo ordenar una colección. Consiste en recorrer la colección seleccionando sus elementos de a pares. y si corresponde ordenarlos entre sí.
+
+
+Seleccionamos el primer elemento y lo comparamos con el segundo. Si están desordenados (es decir, el segundo es menor que el primero) los permutamos. Luego, seleccionamos el segundo y lo comparamos con el tercero, y así sucesivamente.
+Este proceso colocará al mayor elemento de la colección en el último lugar, ocupando así su lugar definitivo. Después de repetir el proceso tantas veces como elementos tenga la colección, esta quedará ordenada.
+
+
+void bubbleSort(Coll<int>& e)
+{
+int n = collSize<int>(c);
+for(int i=O; i<n; i++)
+{
+________________
+parcialmente ordenada es probable que no sea necesario repetirlo tantas veces.
+La mejora consiste en comprobar si durante la iteración actual se realizó, al menos, una permutación. Si dicha iteración concluyó y no fue necesario permutar ningún elemento será porque todos los elementos de la colección ya están en orden, señal de que podemos detener el proceso.
+
+
+void bubbleSortMejorado(Coll<int>& e)
+{
+int n = collSize<int>(c);  
+bool ordenado= false;
+while(!ordenado)
+{
+for(int j=O; j<n-1; j++)
+{      
+int a
+int b
+if( a>b
+________________
+collGetAt<int>(c,j,stringToint); collGetAt<int>(c,j+l,stringToint);
+________________
+ordenado= true; for(int j=O; j<n-l;j++) (
+{
+int aux = a; collSetAt<int>(c,b,j,intToString); collSetAt<int>(c,aux,j+l,intToString);
+________________
+int a
+int b
+if( a>b
+{
+________________
+collGetAt<int>(c,j,stringToint); collGetAt<int>(c,j+l,stringToint);
+int aux = a; collSetAt<int>(c,b,j,intToString); collSetAt<int>(c,aux,j+l,intToString); ordenado= false;
+
+
+                  3. Ordenamiento por burbujeo mejorado
+El burbujeo tradicional repite el proceso de comparación n veces, donde n es el tamaño de la colección que ordenaremos. Sin embargo, si la colección está
+
+
+                  4. Ordenamiento por inserción avanzado
+Este método de ordenamiento es similar al de inserción simple, pero no requiere una colección auxiliar. Utiliza para tal fin una parte de la misma colección.
+Llamaremos T a toda la colección. Dentro de T, una parte será e (la colección que vamos a ordenar) y otra será A (el espacio auxiliar).
+Necesitaremos una variable p para delimitar. dentro de T. hasta dónde llega Cy dónde comienza A.  
+
+
+e
+	
+
+	
+
+	
+
+	
+
+	A
+	
+
+	5
+	3
+	4
+	7
+	6
+	
+
+	2
+	o
+	1
+	2
+	3
+	4
+	
+
+	6
+	
+
+
+
+Figura 2.2.Colección separada en dos partes: real y auxiliar  
+
+
+Como vemos en la imagen, tenemos una única colección T que representa dos colecciones: e y A donde e abarca los elementos ubicados entre las posiciones O y p-1, y A los elementos que se ubican a partir de p.
+Al ínícío, la colección A estará vacía. por lo que todos los elementos de T serán la colección C. El valor de p coincidirá con el tamaño de la colección. Después, buscamos el menor elemento en e (entre O y p}, lo removemos y lo agregamos al final de A. Al remover un elemento de C, los elementos de A se
+________________
+
+
+void insetionSortAdv(Coll<int>& e)
+{
+int p = collSize<int>(c);
+while( p>O
+1
+int pos        O;
+int min        collGetAt<int>(c,O,stringToint); for(int i=O; i<p; i++)
+{  
+int elm - collGetAt<int>(c,i,stringToint); if( elm<min)
+1
+min        elm;
+pos        i;
+collAdd<int>(c,min,intToString);        >
+collRemoveAt<int>(c,pos); p--;
+
+
+
+
+
+
+                  2. Búsqueda
+desplazarán hacía la izquierda, por lo que tendremos que decrementar el valor de        2.5.2.1.  Búsqueda lineal
+p. Cuando p llegue a O, C se habrá quedado vacía Y A tendrá los elementos de C La búsqueda lineal es la primera solución que pensamos cuando hablamos de ordenados.        buscar un elemento dentro de una colección, porque además de ser intuitiva es fácil de implementar. Consiste en recorrer los elementos de la colección, del
+primero al último, y detener el proceso cuando encontramos lo que buscamos. La
+
+
+función retorna la posición en la cual encontró lo que buscaba o negativo si no lo                Veamos una colección de números enteros. ordenada de menor a mayor. encontró.        donde buscaremos el valor 28 para determinar si lo contiene. y en qué posición.
+El algoritmo utiliza un índice i para señalar el primer elemento de la
+int search(Coll<int> c,int v)        colección. un índice j para señalar el último. y calcula la posición intermedia k =
+(i+j)/2
+
+
+int i = O;
+recorro m er,tras no e.'lcuentre y no llegue e.1final  
+int n = collSize<int>(c);
+while(i<n && collGetAt<int>(c,i,stringToint)!=v
+{
+i++;  
+
+
+
+
+/  retorno        a posicion donde encontre negativo  
+return i<n?i:-1;
+________________
+
+
+
+
+
+
+
+
+3
+	6
+	8
+	14
+	17
+	23
+	28
+	32
+	39
+	51
+	o
+	
+
+	2
+	
+
+	
+
+k
+	
+
+	6
+	
+
+	8
+	9
+j
+	Debemos comparar el elemento que encontramos en la posición k de la colección con el valor que estamos buscando. Los llamaremos respectivamente e y
+V.
+
+
+Si e<v. entonces. de existir ven la colección. seguro que estará ubicado en la mitad de la derecha. porque al estar ordenada todos los elementos ubicados a la izquierda serán más pequeños aún.  
+Para descartar la mitad izquierda de la colección movemos el índice i a la posición k+l y volvemos a calcular k como la media entre i y j.
+La búsqueda lineal recorre la colección buscando un elemento. Si el         
+elemento no existe o se ubica entre los últimos lugares de la colección, el algoritmo
+	
+
+	8
+	44
+	23
+	28
+	32
+	39
+	51
+	deberá evaluar toda la colección para dar una respuesta.
+	o
+	
+
+	
+
+	5
+	6
+	
+
+k
+	8
+	9
+j
+	
+
+2.5.2.2.  Búsqueda binaria
+La búsqueda binaria. también llamada dicotómica. divide la colección en mitades. Cada mitad la vuelve a dividir. una y otra vez. hasta dar con el elemento buscado. o determinar que dicho elemento no existe dentro de la colección.
+Este algoritmo es mucho más eficiente que el anterior. pero como contrapartida requiere que los elementos del conjunto estén ordenados.
+________________
+
+
+En este caso. resulta que e>v (32 es mayor que 28). entonces. de existir v se ubicará en la mitad izquierda de lo que queda de la colección. Para descartar la mitad derecha movemosj a k-1 y volvemos a calcular k.
+
+
+  
+
+8        23        28        69  
+________________
+if( elm<v
+o        2        5        6
+i k        j
+________________
+8        9        {
+________________
+i=k+l;
+El elemento que encontramos (23) es un valor menor que el que buscamos
+(28). así que debemos mover i a la derecha de k.
+________________
+else
+[
+g        44        28
+o        2        5        6        8        9
+ij k
+________________
+if( elm>v
+{  
+j=k-1;  
+
+
+else
+Al final. encontramos lo que buscamos en la posición 6. media entre i y I
+De no existir el elemento buscado. los índices i y j terminarán cruzados (i>j).
+y esto nos dará la pauta de que la búsqueda finalizó.
+<        int binarySeareh(Coll<int> e,int v)
+________________
+ene=true;
+
+
+
+
+return i<=j?k:-1;        >  
+{
+int k;
+bool ene= false;
+int i        O;
+int j = collSize<int>(c)-1;
+while( i<=j && !ene)
+{  
+________________
+
+
+
+
+                  3. Autoevaluación y ejercicios
+k = (i+j)/2;
+int elm = eollGetAt<int>(c,k,stringToint);
+
+
+
+
+  
+
+Autoevaluación
+________________
+                  1. Estructura de datos (parte 1)
+  
+
+Lección 9
+
+
+<
+
+
+                  6. Lección 9  
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicios  
+________________
+Una estructura de datos es un conjunto de datos. Cuando declaramos un tipo de dato usando la palabra struct creamos una estructura compuesta por varios datos, tantos como campos agrupa dicha estructura. La colección de objetos que implementamos con el TAD Coll permite agrupar un conjunto de datos: por lo tanto, es una estructura de datos.
+                     1. Estructuras estáticas y dinámicas  
+Esta clasificación se refiere a la posibilidad de agregar. modificar o eliminar datos sobre la estructura. y al hecho de que cada una de estas acciones se corresponda con un mayor o menor consumo de memoria. Es decir: que pueda crecer o
+Durante esta lección estudiaremos estructuras de datos. Entendiendo el concepto de estructura como conjunto de datos. y estructura de datos como una construcción o anidamiento de conjuntos de datos.
+Los contenidos que aquí trataremos parten de suponer y aceptar que el lector desarrolló y probó todas y cada una de las funciones de la API del TAO Coll. presentado y discutido en los apartados anteriores. De no ser así. sugiero detener la lectura y completar dicha tarea antes de continuar con la presente lección.
+________________
+decrecer.
+Las estructuras que declaramos con struct son estáticas. Esto significa que la cantidad de datos que agrupa una estructura no puede ser modificada durante la ejecución del programa. y el único modo de alterar dicha cantidad es modificando el código fuente y volviendo a compilar.
+La estructura X. cuyo código vemos a la derecha, declara un conjunto capaz de contener 5 valores enteros. y requiere 20 bytes de memoria, ya que cada int
+
+
+ocupa 4 bytes. Alterar dicha capacidad. agregando. quitando o modificando campos. requiere modificar y recompilar su código fuente.
+
+
+
+
+struct X
+l
+int el; int c2; int c3; int c4; int cS;
+________________
+
+
+xl.cl xl.c2
+
+
+X x2;
+x2.cl x2.c2 x2.c3 x2.c4 x2.c5
+________________
+
+
+1;
+2;
+
+
+uso todos sus campos, iqual requiere 20 bytes
+1;
+2;
+3;
+4;
+5;
+} ;
+
+
+
+
+Las variables de tipo X siempre ocuparán la misma cantidad de memoria. más allá de que usemos o no todos sus campos.  
+En el siguiente código, xl y x2 (tipo X) ocupan la misma cantidad de memoria.
+________________
+Por su parte. el TAD coll implementa una estructura de datos dinámica. Esto significa que la cantidad de elementos del conjunto puede variar durante la ejecución del programa; y por supuesto, la colección requerirá más memoria a medida que le vayamos agregando más elementos.
+                        2. Estructura de datos como cimiento del algoritmo        >
+La estructura de datos es el soporte del algoritmo. Una estructura mal diseñada
+complica la solución. haciendo que el algoritmo se vuelva excesivamente complejo  
+X xl;
+________________
+uso solo 2 campos, 1gual requiere 20 bytes
+________________
+o inviable. En cambio. una estructura adecuada asegura un algoritmo fluido. simple y eficaz.
+Por el momento. sólo contamos con los recursos struct yCol. suficiente para comenzar a tejer nuevas estructuras que resulten de la combinación de ambos. Por ejemplo: una colección de colecciones. una colección de estructuras. una colección de estructuras donde cada una contiene una colección. etcétera.
+Desde ahora, no sólo pensaremos en diseñar un algoritmo. También será nuestra tarea pensar y construir una estructura de datos que le dé soporte.
+
+
+                        3. Colección de estructuras
+
+
+Analizaremos un ejemplo que muestra cómo crear una colección de estructuras. Comencemos declarando la estructura Persona.
+
+
+
+
+struct  Persona
+
+
+int dni;
+
+
+
+
+
+
+string nom;
+);
+________________
+Para operar con una colección de personas. primero debemos disponer de las funciones de conversión y comparación.
+La conversión entre Persona y string, y viceversa. la llevan a cabo las funciones de conversión: personaTostring y personaFromstring, necesarias para invocar a collAdd. collSetAt. collNext y collGetAt. entre otras.
+
+
+string personaToString(Persona p)
+{
+return intToString(p.dni)+","+p.nombre;
+
+
+Al declarar: Coll<Persona> c. la variable e nos da acceso a un conjunto de datos que. gráficamente. podríamos representar del siguiente modo:    
+
+
+
+
+o
+________________
+Persona personaFromString(string s) Persona p;
+p.dni = stringTolnt(getTokenAt(s,O, ', '));  
+p.nom = getTokenAt(s,l, ', ');
+
+
+
+
+
+
+return p;  
+
+
+2
+
+
+
+
+Figura 2.3.Colección de estructuras
+
+
+Por la naturaleza del TAD coll. internamente cada elemento de la colección es un token dentro de una cadena tokenizada. En este caso. dicho token es una cadena que representa una persona.
+________________
+
+
+Es muy importante observar que la cadena que diseñamos para representar a una persona usa el carácter ',' (coma) para separar entre sí los atributos (o campos) de la persona que representa. Si tenemos tres personas: (10. "Juan"}.
+(20, "Pedro"} y (30. "Pablo"}. sus cadenas de representación serán: "10, Juan",
+"2 o, Pedro" y "3 o, Pablo". Al agregarlas a una colección. su cadena
+tokenizada (separada con ' 1 ') quedará del siguiente modo:
+
+
+"10,JuanJ20,Pedrol30,Pablo"
+Vemos que la colección de estructuras no es más que una simple cadena tokenizada. En otras palabras, una colección de estructuras encapsula una cadena tokenizada donde cada token es. en sí mismo, una cadena tokenizada.
+Ahora. desarrollaremos dos funciones de comparación: cmpPersonaDNI, que compara una persona (su DNI) con un número de DNI: y cmpPersonaNombre, que realiza la comparación entre una persona (su nombre) y un nombre.
+Estas funciones serían necesarias si quisiéramos invocar a collFind para buscar, dentro de la colección, una persona que tenga un determinado número de DNI o un cierto nombre.
+
+
+int cmpPersonaDNI(Persona p,int dni)  
+{
+return p.dni-dni;
+
+
+
+
+int cmpPersonaNombre(Persona p,string nom)
+{
+________________
+
+
+int cmpPersonasNomAsc(Persona pl,Persona p2)
+{
+return pl.nom<p2.nom?-1:pl.nom>p2.nom?l:O;
+
+
+
+
+int cmpPersonasNomDesc(Persona pl,Persona p2)
+return p2.nom<pl.nom?-l:p2.nom>pl.nom?l:O;
+
+
+
+
+int cmpPersonasDNI(Persona pl,Persona p2)
+
+
+return pl.dni-p2.dni;
+
+
+
+
+
+
+Notemos la diferencia entre estas funciones y las anteriores. Por ejemplo: en cmpPersonasDNI comparamos dos personas por su número de DNI: en cambio. en cmpPersonaDNI la comparación se realiza entre una persona y un número de DNI.  
+return p.nom<nom?-1:p.nom>nom?l:O;
+
+
+
+
+Finalmente. para invocar a collSort desarrollaremos tres funciones que nos permitirán comparar personas: cmpPersonasNomAsc, que compara dos personas p1 y p2, determinando que p1 precede a p2 si su nombre es alfabéticamente menor: cmpPersonasNomDesc, que indicará que p1 precede a
+________________
+r cibe dos oers0nas
+int cmpPersonasDNI(
+Persona pl
+, Persona p2)
+
+
+return pl.dni-p2.dni;
+________________
+I r cibe p rsona        inL
+int cmpPersonaDNI(    
+Persona p
+,int dni)
+return p.dni-dni;
+p2 si su nombre es alfabéticamente mayor; y cmpPersonasDNI. que determina que p1 precede a p2 si su número de documento es inferior.
+________________
+Ahora sí, podemos usar una colección de personas en nuestro programa.
+
+
+int main()
+{  
+// creo una colecc.1.on de personas
+Coll<Persona> e= coll<Persona>();
+________________
+/ le agrego tres pér onas
+Persona p = {10, "Pedro"}; collAdd<Persona>(c,p,personaToString);  
+
+
+p = {20, "Pablo"}; collAdd<Persona>(c,p,personaToString);
+p = {30,  "Juan"};
+collAdd<Persona>(c,p,personaToString);
+  
+
+iteLo la colcccion collReset<Persona>(c); while(collHasNext<Persona>(c)) 1    
+/ obteriqo slqu ente oers na
+Persona p = collNext<Persona>(c,personaFromString);    
+cout<< v.dni << "," << v.nombre << endl;
+
+
+
+
+1/ el usuario ingresa (introduce) un numero de DNI
+int dni;
+cout << "Ingrese un dni: ";
+cin >> dni;
+  
+
+int pos=collFind<Persona,int>(c
+,dni  
+,personaFromString);
+
+
+/ si e:xisce una persona con el DNI ir1qresado...    
+if( pos>=O)
+1
+/J  obtenqo la persona y la muestro
+
+
+1 I no '°:-:is tt.  una        persona con EeSt DN.L
+cout <<  "Persona  no encontrada"<< endl.;  
+________________
+return O;
+
+
+
+
+  
+
+
+
+  
+
+collReset<Persona>(c); while(collHasNext<Persona>(c))  
+{
+Persona p = collNext<Persona>(c,personaFromString);      
+cout << v.dni  << ","  << v.nombre << endl.;
+<        collSort<Persona>(c      
+,cmpPersonasN
+,
+
+
+1/ mu tro .a collReset<Persona>(c); while(collHasNext<Persona>(c))          
+{        
+Persona p  =  collNext<Persona>(c,personaFromString);
+cout << v.dni  << ","  << v.nombre << endl.;  
+  
+
+collSort<Persona>(c
+________________
+                        4. Colección de colecciones
+El TAD Coll permite mantener en memoria una colección de objetos de tipo T. Dado que T es un tipo genérico. perfectamente podría tratarse de una colección en sí misma. De este modo. cada uno de los elementos de nuestra colección será una colección de elementos: y la colección principal. una colección de colecciones.  
+
+
+ o        l        2 
+1        2        3
+1        1        1        1
+	o        l        z
+4        5        6
+1          1          1          1
+	 o        l        2 
+7        8        9
+1        1        1          1
+	Si declaramos: Coll<Coll<int> > c. la variable e representará un conjunto de datos como el que ilustra la siguiente imagen.
+
+
+
+
+o        >        
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+Figura 2.4. Colección de colecciones
+
+
+En la imagen vemos que la colección principal tiene tres elementos. cada uno de los cuales es una colección que contiene tres elementos de tipo int.
+Para usar esta colección de colecciones debemos disponer de las funciones de conversión tToString y tFromString, que en este caso serán: collintToStringycollintFrornstring.
+
+
+string collintToString(Coll<int> x)
+{
+string r  = "";
+collReset<int>(x);
+while( collHasNext<int>(x)
+{
+int i = collNext<int>(x,stringToint); addToken(r, ', ',intToString(i));
+________________
+Coll<int> collintcromString(string s)
+{
+Coll<int> x = coll<int>(', ');  
+for(int i=0; i<tokenCount (s, ', '); i++)
+{
+int i = stringToint(getTokenAt(s, ', ',i)); collAdd<int>(x,i,intToSLring);
+
+
+
+
+return x;
+
+
+return r;
+
+
+
+
+<        Observemos que la cadena que construimos en collintTostring utiliza
+________________
+
+
+Ahora sí. estamos en condiciones de usar una colección de colecciones en nuestro programa. tal como vemos en el siguiente ejemplo.
+>
+el carácter ','        para separar entre sí los elementos de la colección que representa.  int main <)
+{
+Si la colección c. que declaramos e ilustramos previamente. tuviese las colecciones (1.2,3). (4,5,6) y (7,8,9) (tal cual la figura). su cadena tokenizada será:
+"1, 2, 3 I 4, 5, 6 I 7, 8, 9"
+Esto quiere decir que una colección de colecciones encapsula una cadena
+tokenizada, donde cada token es. en sí mismo. una cadena tokenizada.
+Veamos la función inversa, que recibe una cadena y retorna una colección.
+________________
+Coll<Coll<int> > e        coll<Coll<int> >();
+
+
+/ debemos t=specificdr s_parador diferente a '1 ' Coll<int> x = coll<int>(','); collAdd<int>(x,l,intToString);    
+collAdd<int>(x,2,intToString); collAdd<int>(x,3,intToString);
+
+
+,¡  la aor qo a la  e  
+collAdd<Coll<int> >(c,x,collintT        );  
+
+
+
+
+x = coll<int>(','); collAdd<int>(x,4,i        );    
+collAdd<int>(x,5,i        ); collAdd<int>(x,6,intToString);  
+
+
+1/ la  agrego a la    
+collAdd<Coll<int> >(c,x,        );
+
+
+I otr  olercion mas...
+x = coll<int>(','); collAdd<int>(x,7,intToString); collAdd<int>(x,8,intToString); collAdd<int>(x,9,intToString);
+________________
+cout << endl; return O;
+
+
+
+
+
+
+La salida del programa será:  
+
+
+
+
+[l  2 3]  (4 5 6]        [7 8 9]
+
+
+
+
+                        5. Colecciones de estructuras que tienen colecciones
+Perfectamente, alguno de los campos de una estructura podría ser una colección. Como es el caso de la estructura conjunto,cuyo código vemos a continuación.  
+
+
+struct Conjunto
+1
+string nom; 1/ nombre del con;unto  
+Coll<int> e; // elementos del conJunto
+) ;
+
+
+1/ la agrego a la  
+collAdd<Coll<int> >(c,x,        );
+
+
+1/ ahora iLero la cul cc.1on principal
+while( collHasNext<Coll<int> >(e) )
+{
+________________
+Sí declaramos coll<Conjunto> ce, tendremos un conjunto de datos como el que ilustra la siguiente figura.
+cout << "[";
+
+
+I 0bttngo <=l SLguienL<= tleme,,to (que es: Cull<int>)
+Coll<int> z=collNext<Coll<int> >(c,collintFromString);
+
+
+
+
+  
+
+nom
+pares
+	e
+
+
+2        4        6        8
+1         1        1        1        1 
+o        1        2        3
+	nom
+impares
+	e
+1        3        5
+1         1        1         1
+o        1        2
+	nom
+primos
+	e
+2        3        5        7        11
+1         1        1        1        1         1
+o        l        2        3        4
+	string conjuntoToString{Conjunto conjunto)
+o        {  
+string s=conjunto.nom+"#"; collReset<int>(conjunto.c);
+  
+
+int size=collSize<int>(conjunto.c);
+  
+          
+for(int i=O;i<size;i++)
+{  
+int v = collGetAt<int>{conjunto.c,i,stringToint);            
+s+=intToString(v)+((i<size-1)?",":"");
+  
+  
+
+
+
+
+
+Figura 2.5. Colección de estructuras, cada una de las cuales tiene una colección
+
+
+Usar esta estructura requiere funciones de conversión tToString y tFromString. que en este caso serán: conjuntoToString y conjuntoFromstring.  
+________________
+return s;
+
+
+
+
+Conjunto conjuntoFromString(string s)  
+{
+Conjunto conjunto;
+
+
+. ombre de.,_ <...LJni u1,to      
+conjunto.nom • getTokenAt(s,'#',O);
+
+
+1/ co.!.e1e;clo,1 de,  elementos    
+conjunto.e = coll<int>(',');
+
+
+/ cadena tokenizada con los elementos del conJunto  
+string x = getTokenAt(s,'#',l);
+
+
+int n=tokenCount{x,','); for(int i=O;i<n;i++)
+{  
+aqrego ,os e emen'os a la cclerr or de conjunto int v = stringToint(getTokenAt(x,',',i)); collAdd<int>(conjunto.c,v,intToString);          
+
+
+Ahora. en nuestro programa podemos usar una colección de elementos tipo
+conjunto.como vemos a continuación.
+________________
+
+
+int main()
+{
+conJunto de los   umezos pares Coll<Conjunto>conjuntos = coll<Conjunto>(); Conjunto el = {"pares",coll<int>(',')};    
+collAdd<int>(cl.c,2,intToString); collAdd<int>(cl.c,4,intToString); collAdd<int>(cl.c,6,intToString); collAdd<int>(cl.c,8,intToString); collAdd<Conjunto>(conjuntos,cl,conjuntoToString);  
+11  con   untos de los  r.umeros impares Conjunto c2 - {"impares",coll<int>(',')}; col1Add<int>(c2.c,l,intToString); collAdd<int>(c2.c,3,intToSlring); collAdd<int>(c2.c,5,intToString);
+col1Add<Conjunto>(conjuntos,c2,conjuntoToString);    
+11  col'  untos ae lJs nume os  pnmos Conjunto c3 = {"primos",coll<int>(',')}; collAdd<int>(c3.c,2,intToString); collAdd<int>(c3.c,3,intToString); collAdd<int>(c3.c,5,intToString); collAdd<int>(c3.c,7,intToString); col1Add<int>(c3.c,11,intToString);
+collAdd<Conjunto>(conjuntos,c3,conjuntoToString);
+collReset<Conjunto>(conjuntos);
+while( collHasNext<Conjunto>(conjuntos) )
+1
+Conjunto conj=collNext<Conjunto>(conjuntos  
+
+
+I rombre del or1unto
+cout << conj.nom << endl;
+eJeme..itos de¿ conjunto
+collReset<int>(conj.c);
+while{ collHasNext<int>(coni.c)
+
+
+  
+
+                        2. Autoevaluación y ejercicios        ¿Qué sigue?
+
+
+En el próximo capítulo aprenderemos a usar archivos. De este modo los datos que procesan los programas, así como la información que generan, podrán provenir desde, y/o volcarse hacía, un archivo almacenado en el disco duro del ordenador.    
+Cuando los datos perduran más allá del tiempo en que el programa que los consume y/o produce está en ejecución, decimos que son persistentes. Los archivos son un medio a través del cual podremos lograr dicha persistencia de datos.
+<                  >
+Autoevaluación
+  
+
+
+
+Ejercicios
